@@ -79,7 +79,7 @@
       {
         "name": "Recipe_HoneySausages",
         "item": "HoneySausages",
-        "amount": 1,
+        "amount": 4,
         "craftingStation": "piece_cauldron",
         "minStationLevel": 1,
         "enabled": true,
@@ -155,7 +155,7 @@
       {
         "name": "Recipe_OdinsDelight",
         "item": "OdinsDelight",
-        "amount": 1,
+        "amount": 2,
         "craftingStation": "piece_cauldron",
         "minStationLevel": 1,
         "enabled": true,
