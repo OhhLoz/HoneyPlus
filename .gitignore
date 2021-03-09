@@ -117,3 +117,9 @@ HoneyPlus/Assets/Prefabs.meta
 HoneyPlus/Assets/Scenes.meta
 
 HoneyPlus/Assets/Scripts.meta
+
+HoneyPlus/obj/
+
+HoneyPlus/bin/
+
+HoneyPlus/libs/
