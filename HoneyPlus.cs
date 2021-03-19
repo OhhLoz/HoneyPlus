@@ -18,7 +18,7 @@ namespace HoneyPlus
         public const string modAuthor = "Loz";
         public const string modGuid = "Loz." + modName;
         private const string modName = "HoneyPlus";
-        private const string modVer = "1.0.0";
+        private const string modVer = "1.0.1";
 
         internal static HoneyPlus Instance { get; private set; }
 
