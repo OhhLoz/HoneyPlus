@@ -1,8 +1,11 @@
 {
     "recipes": [
       {
-        "name": "Recipe_HoneyBread",
+        "name": "$custom_item_honeybread",
+        "nameValue": "Honey Baked Bread",
         "item": "HoneyBread",
+        "descriptionToken" : "$custom_item_honeybread_description",
+        "description" : "Bread baked using a honey glaze",
         "amount": 1,
         "craftingStation": "piece_cauldron",
         "minStationLevel": 1,
@@ -20,8 +23,11 @@
         ]
       },
       {
-        "name": "Recipe_HoneyCookedMeat",
+        "name": "$custom_item_honeycookedmeat",
+        "nameValue": "Honey Glazed Meat",
         "item": "HoneyCookedMeat",
+        "descriptionToken" : "$custom_item_honeycookedmeat_description",
+        "description" : "Meat marinated and cooked with honey.",
         "amount": 1,
         "craftingStation": "piece_cauldron",
         "minStationLevel": 1,
@@ -39,8 +45,11 @@
         ]
       },
       {
-        "name": "Recipe_HoneyCookedNeck",
+        "name": "$custom_item_honeycookedneck",
+        "nameValue": "Honey Glazed Neck Tail",
         "item": "HoneyCookedNeck",
+        "descriptionToken" : "$custom_item_honeycookedneck_description",
+        "description" : "Meat marinated and cooked with honey.",
         "amount": 1,
         "craftingStation": "piece_cauldron",
         "minStationLevel": 1,
@@ -58,8 +67,11 @@
         ]
       },
       {
-        "name": "Recipe_HoneyCookedLox",
+        "name": "$custom_item_honeycookedlox",
+        "nameValue": "Honey Glazed Lox Meat",
         "item": "HoneyCookedLox",
+        "descriptionToken" : "$custom_item_honeycookedlox_description",
+        "description" : "Meat marinated and cooked with honey.",
         "amount": 1,
         "craftingStation": "piece_cauldron",
         "minStationLevel": 1,
@@ -77,8 +89,11 @@
         ]
       },
       {
-        "name": "Recipe_HoneySausages",
+        "name": "$custom_item_honeysausages",
+        "nameValue": "Honey Sweetened Sausages",
         "item": "HoneySausages",
+        "descriptionToken" : "$custom_item_honeysausages_description",
+        "description" : "Sausages sweetened with honey",
         "amount": 4,
         "craftingStation": "piece_cauldron",
         "minStationLevel": 1,
@@ -96,8 +111,11 @@
         ]
       },
       {
-        "name": "Recipe_HoneySerpentMeat",
+        "name": "$custom_item_honeyserpentmeat",
+        "nameValue": "Honey Glazed Serpent Meat",
         "item": "HoneySerpentMeat",
+        "descriptionToken" : "$custom_item_honeyserpentmeat_description",
+        "description" : "Meat marinated and cooked with honey.",
         "amount": 1,
         "craftingStation": "piece_cauldron",
         "minStationLevel": 1,
@@ -115,8 +133,11 @@
         ]
       },
       {
-        "name": "Recipe_HoneyTeriyakiSalmon",
+        "name": "$custom_item_honeyteriyakisalmon",
+        "nameValue": "Teriyaki Salmon",
         "item": "HoneyTeriyakiSalmon",
+        "descriptionToken" : "$custom_item_honeyteriyakisalmon_description",
+        "description" : "Meat marinated and cooked with honey.",
         "amount": 1,
         "craftingStation": "piece_cauldron",
         "minStationLevel": 1,
@@ -134,8 +155,11 @@
         ]
       },
       {
-        "name": "Recipe_HoneyTeriyakiSalmonWrap",
+        "name": "$custom_item_honeyteriyakisalmonwrap",
+        "nameValue": "Teriyaki Salmon Wrap",
         "item": "HoneyTeriyakiSalmonWrap",
+        "descriptionToken" : "$custom_item_honeyteriyakisalmonwrap_description",
+        "description" : "Meat marinated and cooked with honey.",
         "amount": 1,
         "craftingStation": "piece_cauldron",
         "minStationLevel": 1,
@@ -153,8 +177,11 @@
         ]
       },
       {
-        "name": "Recipe_OdinsDelight",
+        "name": "$custom_item_odinsdelight",
+        "nameValue": "Odin's Delight",
         "item": "OdinsDelight",
+        "descriptionToken" : "$custom_item_odinsdelight_description",
+        "description" : "A nutritious Jam using all components Valheim has to offer.",
         "amount": 2,
         "craftingStation": "piece_cauldron",
         "minStationLevel": 1,

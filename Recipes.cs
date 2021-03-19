@@ -14,7 +14,10 @@ namespace HoneyPlus
     public class CustomRecipe
     {
         public string name;
+        public string nameValue;
         public string item;
+        public string descriptionToken;
+        public string description;
         public int amount;
         public string craftingStation;
         public int minStationLevel;
