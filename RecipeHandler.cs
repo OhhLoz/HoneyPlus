@@ -71,6 +71,7 @@ namespace HoneyPlus
                 if (isPrefabFound)
                 {
                     tempRecipe.m_item = currPrefab.GetComponent<ItemDrop>();
+                    tempRecipe.m_amount = recipe.amount;
 
                     tempRecipe.m_craftingStation = Mock<CraftingStation>.Create(recipe.craftingStation);
 
