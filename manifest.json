@@ -1,6 +1,6 @@
 {
   "name": "HoneyPlus",
-  "version_number": "1.0.5",
+  "version_number": "1.0.6",
   "website_url": "https://github.com/OhhLoz/HoneyPlus",
   "description": "Adds new food items surrounding Honey",
   "dependencies": [
