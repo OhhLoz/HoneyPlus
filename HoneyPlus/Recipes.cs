@@ -1,27 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using Jotunn.Configs;
 
 namespace HoneyPlus
 {
   [Serializable]
-  public class HoneyPlusRecipeRequirement
+  public class HoneyPlusTranslation
   {
-    public string item;
-    public int amount;
-  }
-
-  [Serializable]
-  public class HoneyPlusRecipeConfig : RecipeConfig
-  {
+    public string NameToken;
     public string NameValue;
     public string DescriptionToken;
     public string Description;
   }
-
   [Serializable]
-  public class HoneyPlusRecipeConfigs
+  public class HoneyPlusTranslations
   {
-    public List<HoneyPlusRecipeConfig> recipes = new List<HoneyPlusRecipeConfig>();
+    public Dictionary<string, HoneyPlusTranslation> translations = new Dictionary<string, HoneyPlusTranslation>();
   }
 }

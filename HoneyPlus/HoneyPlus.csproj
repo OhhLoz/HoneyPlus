@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Recipes.cs" />
+    <None Include="i18n.json" />
     <None Include="recipes.json" />
     <Compile Include="Properties\IgnoreAccessModifiers.cs" />
     <Compile Include="HoneyPlus.cs" />

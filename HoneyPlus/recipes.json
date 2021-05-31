@@ -1,15 +1,10 @@
 ﻿[
       {
-        "Name": "$custom_item_honeybread",
-        "NameValue": "Honey Baked Bread",
-        "Item": "HoneyBread",
-        "DescriptionToken": "$custom_item_honeybread_description",
-        "Description" : "Bread baked using a honey glaze",
+        "Name": "HoneyBread",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "RepairStation": "",
         "Requirements": [
           {
             "Item": "Bread",
@@ -22,16 +17,11 @@
         ]
       },
       {
-        "Name": "$custom_item_honeycookedmeat",
-        "NameValue": "Honey Glazed Meat",
-        "Item": "HoneyCookedMeat",
-        "DescriptionToken": "$custom_item_honeycookedmeat_description",
-        "Description" : "Meat marinated and cooked with honey.",
+        "Name": "HoneyCookedMeat",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "RepairStation": "",
         "Requirements": [
           {
             "Item": "CookedMeat",
@@ -44,16 +34,11 @@
         ]
       },
       {
-        "Name": "$custom_item_honeycookedneck",
-        "NameValue": "Honey Glazed Neck Tail",
-        "Item": "HoneyCookedNeck",
-        "DescriptionToken": "$custom_item_honeycookedneck_description",
-        "Description" : "Meat marinated and cooked with honey.",
+        "Name": "HoneyCookedNeck",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "RepairStation": "",
         "Requirements": [
           {
             "Item": "NeckTailGrilled",
@@ -66,16 +51,11 @@
         ]
       },
       {
-        "Name": "$custom_item_honeycookedlox",
-        "NameValue": "Honey Glazed Lox Meat",
-        "Item": "HoneyCookedLox",
-        "DescriptionToken": "$custom_item_honeycookedlox_description",
-        "Description" : "Meat marinated and cooked with honey.",
+        "Name": "HoneyCookedLox",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "RepairStation": "",
         "Requirements": [
           {
             "Item": "CookedLoxMeat",
@@ -88,16 +68,11 @@
         ]
       },
       {
-        "Name": "$custom_item_honeysausages",
-        "NameValue": "Honey Sweetened Sausages",
-        "Item": "HoneySausages",
-        "DescriptionToken": "$custom_item_honeysausages_description",
-        "Description" : "Sausages sweetened with honey",
+        "Name": "HoneySausages",
         "Amount": 4,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "RepairStation": "",
         "Requirements": [
           {
             "Item": "Sausages",
@@ -110,16 +85,11 @@
         ]
       },
       {
-        "Name": "$custom_item_honeyserpentmeat",
-        "NameValue": "Honey Glazed Serpent Meat",
-        "Item": "HoneySerpentMeat",
-        "DescriptionToken": "$custom_item_honeyserpentmeat_description",
-        "Description" : "Meat marinated and cooked with honey.",
+        "Name": "HoneySerpentMeat",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "RepairStation": "",
         "Requirements": [
           {
             "Item": "SerpentMeatCooked",
@@ -132,16 +102,11 @@
         ]
       },
       {
-        "Name": "$custom_item_honeyteriyakisalmon",
-        "NameValue": "Teriyaki Salmon",
-        "Item": "HoneyTeriyakiSalmon",
-        "DescriptionToken": "$custom_item_honeyteriyakisalmon_description",
-        "Description" : "Meat marinated and cooked with honey.",
+        "Name": "HoneyTeriyakiSalmon",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "RepairStation": "",
         "Requirements": [
           {
             "Item": "FishCooked",
@@ -154,16 +119,11 @@
         ]
       },
       {
-        "Name": "$custom_item_honeyteriyakisalmonwrap",
-        "NameValue": "Teriyaki Salmon Wrap",
-        "Item": "HoneyTeriyakiSalmonWrap",
-        "DescriptionToken": "$custom_item_honeyteriyakisalmonwrap_description",
-        "Description" : "Meat marinated and cooked with honey.",
+        "Name": "HoneyTeriyakiSalmonWrap",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "RepairStation": "",
         "Requirements": [
           {
             "Item": "FishWraps",
@@ -176,16 +136,11 @@
         ]
       },
       {
-        "Name": "$custom_item_odinsdelight",
-        "NameValue": "Odin's Delight",
-        "Item": "OdinsDelight",
-        "DescriptionToken": "$custom_item_odinsdelight_description",
-        "Description" : "A nutritious Jam using all components Valheim has to offer.",
+        "Name": "OdinsDelight",
         "Amount": 2,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "RepairStation": "",
         "Requirements": [
           {
             "Item": "Raspberry",

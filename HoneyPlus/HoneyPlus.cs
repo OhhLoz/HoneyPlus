@@ -5,6 +5,7 @@ using Jotunn.Managers;
 using Jotunn.Utils;
 using System.IO;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 namespace HoneyPlus
@@ -14,38 +15,49 @@ namespace HoneyPlus
   [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.Patch)]
   internal class HoneyPlus : BaseUnityPlugin
   {
-    public const string PluginGUID = "HoneyPlusJotunn";
-    public const string PluginName = "HoneyPlusJotunn";
-    public const string PluginVersion = "0.0.1";
-    internal static readonly string RecipePath = Path.Combine(BepInEx.Paths.PluginPath, "HoneyPlus", "recipes.json");
+    public const string PluginGUID = "HoneyPlus";
+    public const string PluginName = "HoneyPlus";
+    public const string PluginVersion = "2.0.0";
+
+    private const string AssetBundleName = "honeyplusassets";
+    private const string RecipeFileName = "recipes.json";
+    private const string I18NFileName = "i18n.json";
+
+    private static readonly string ModPath = Path.Combine(BepInEx.Paths.PluginPath, PluginGUID);
 
     private void Awake()
     {
       AddCustomItems();
-      AddRecipes();
-    }
-
-    private static void AddRecipes()
-    {
-      HoneyPlusLogger.LogMessage("Loading Recipes");
-      ItemManager.Instance.AddRecipesFromJson(Path.Combine("HoneyPlus", "recipes.json"));
+      Addi18n();
     }
 
     private static void AddCustomItems()
     {
-      AssetBundle HoneyPlusAssetBundle = AssetUtils.LoadAssetBundleFromResources("honeyplusassets", typeof(HoneyPlus).Assembly);
+      string RecipePath = Path.Combine(ModPath, RecipeFileName);
+      Assembly ModAssembly = typeof(HoneyPlus).Assembly;
+      AssetBundle HoneyPlusAssetBundle = AssetUtils.LoadAssetBundleFromResources(AssetBundleName, ModAssembly);
+      List<ItemConfig> itemConfigs = ItemConfig.ListFromJson(AssetUtils.LoadText(RecipePath));
 
-      List<RecipeConfig> recipeConfigs = RecipeConfig.ListFromJson(AssetUtils.LoadText(RecipePath));
-
-      foreach (RecipeConfig recipeConfig in recipeConfigs)
+      foreach(ItemConfig itemConfig in itemConfigs)
       {
-        if (HoneyPlusAssetBundle.Contains(recipeConfig.Item))
+        if (HoneyPlusAssetBundle.Contains(itemConfig.Name))
         {
-          HoneyPlusLogger.LogMessage($"Loading prefab for {recipeConfig.Item}");
-          GameObject prefab = HoneyPlusAssetBundle.LoadAsset<GameObject>(recipeConfig.Item);
-          CustomItem customItem = new CustomItem(prefab, true);
+          GameObject prefab = HoneyPlusAssetBundle.LoadAsset<GameObject>(itemConfig.Name);
+          CustomItem customItem = new CustomItem(prefab, true, itemConfig);
           ItemManager.Instance.AddItem(customItem);
         }
+      }
+    }
+    private static void Addi18n()
+    {
+      string i18nPath = Path.Combine(ModPath, I18NFileName);
+      string i18nJsonString = AssetUtils.LoadText(i18nPath);
+      HoneyPlusTranslations honeyPlusTranslations = SimpleJson.SimpleJson.DeserializeObject<HoneyPlusTranslations>(i18nJsonString);
+
+      foreach(KeyValuePair<string, HoneyPlusTranslation> translation in honeyPlusTranslations.translations)
+      {
+        LocalizationManager.Instance.AddToken(translation.Value.NameToken, translation.Value.NameValue, false);
+        LocalizationManager.Instance.AddToken(translation.Value.DescriptionToken, translation.Value.Description, false);
       }
     }
 
