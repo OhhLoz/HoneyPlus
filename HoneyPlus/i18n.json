@@ -1,0 +1,58 @@
+﻿{
+  "translations": {
+    "HoneyBread": {
+      "NameToken": "$custom_item_honeybread",
+      "NameValue": "Honey Baked Bread",
+      "DescriptionToken": "$custom_item_honeybread_description",
+      "Description": "Bread baked using a honey glaze",
+    },
+    "HoneyCookedMeat": {
+      "NameToken": "$custom_item_honeycookedmeat",
+      "NameValue": "Honey Glazed Meat",
+      "DescriptionToken": "$custom_item_honeycookedmeat_description",
+      "Description": "Meat marinated and cooked with honey.",
+    },
+    "HoneyCookedNeck": {
+      "NameToken": "$custom_item_honeycookedneck",
+      "NameValue": "Honey Glazed Neck Tail",
+      "DescriptionToken": "$custom_item_honeycookedneck_description",
+      "Description": "Meat marinated and cooked with honey.",
+    },
+    "HoneyCookedLox": {
+      "NameToken": "$custom_item_honeycookedlox",
+      "NameValue": "Honey Glazed Lox Meat",
+      "DescriptionToken": "$custom_item_honeycookedlox_description",
+      "Description": "Meat marinated and cooked with honey.",
+    },
+    "HoneySausages": {
+      "NameToken": "$custom_item_honeysausages",
+      "NameValue": "Honey Sweetened Sausages",
+      "DescriptionToken": "$custom_item_honeysausages_description",
+      "Description": "Sausages sweetened with honey",
+    },
+    "HoneySerpentMeat": {
+      "NameToken": "$custom_item_honeyserpentmeat",
+      "NameValue": "Honey Glazed Serpent Meat",
+      "DescriptionToken": "$custom_item_honeyserpentmeat_description",
+      "Description": "Meat marinated and cooked with honey.",
+    },
+    "HoneyTeriyakiSalmon": {
+      "NameToken": "$custom_item_honeyteriyakisalmon",
+      "NameValue": "Teriyaki Salmon",
+      "DescriptionToken": "$custom_item_honeyteriyakisalmon_description",
+      "Description": "Meat marinated and cooked with honey.",
+    },
+    "HoneyTeriyakiSalmonWrap": {
+      "NameToken": "$custom_item_honeyteriyakisalmonwrap",
+      "NameValue": "Teriyaki Salmon Wrap",
+      "DescriptionToken": "$custom_item_honeyteriyakisalmonwrap_description",
+      "Description": "Meat marinated and cooked with honey.",
+    },
+    "OdinsDelight": {
+      "NameToken": "$custom_item_odinsdelight",
+      "NameValue": "Odin's Delight",
+      "DescriptionToken": "$custom_item_odinsdelight_description",
+      "Description": "A nutritious Jam using all components Valheim has to offer.",
+    }
+  }
+}
