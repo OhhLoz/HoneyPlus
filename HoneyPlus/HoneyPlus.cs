@@ -15,7 +15,7 @@ namespace HoneyPlus
   [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.Patch)]
   internal class HoneyPlus : BaseUnityPlugin
   {
-    public const string PluginGUID = "HoneyPlus";
+    public const string PluginGUID = "OhhLoz-HoneyPlus";
     public const string PluginName = "HoneyPlus";
     public const string PluginVersion = "2.0.0";
 
