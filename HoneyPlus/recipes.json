@@ -1,0 +1,163 @@
+﻿[
+      {
+        "Name": "HoneyBread",
+        "Amount": 1,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 1,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "Bread",
+            "Amount": 1
+          },
+          {
+            "Item": "Honey",
+            "Amount": 2
+          }
+        ]
+      },
+      {
+        "Name": "HoneyCookedMeat",
+        "Amount": 1,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 1,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "CookedMeat",
+            "Amount": 1
+          },
+          {
+            "Item": "Honey",
+            "Amount": 2
+          }
+        ]
+      },
+      {
+        "Name": "HoneyCookedNeck",
+        "Amount": 1,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 1,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "NeckTailGrilled",
+            "Amount": 1
+          },
+          {
+            "Item": "Honey",
+            "Amount": 2
+          }
+        ]
+      },
+      {
+        "Name": "HoneyCookedLox",
+        "Amount": 1,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 1,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "CookedLoxMeat",
+            "Amount": 1
+          },
+          {
+            "Item": "Honey",
+            "Amount": 4
+          }
+        ]
+      },
+      {
+        "Name": "HoneySausages",
+        "Amount": 4,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 1,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "Sausages",
+            "Amount": 4
+          },
+          {
+            "Item": "Honey",
+            "Amount": 12
+          }
+        ]
+      },
+      {
+        "Name": "HoneySerpentMeat",
+        "Amount": 1,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 1,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "SerpentMeatCooked",
+            "Amount": 1
+          },
+          {
+            "Item": "Honey",
+            "Amount": 4
+          }
+        ]
+      },
+      {
+        "Name": "HoneyTeriyakiSalmon",
+        "Amount": 1,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 1,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "FishCooked",
+            "Amount": 1
+          },
+          {
+            "Item": "Honey",
+            "Amount": 2
+          }
+        ]
+      },
+      {
+        "Name": "HoneyTeriyakiSalmonWrap",
+        "Amount": 1,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 1,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "FishWraps",
+            "Amount": 1
+          },
+          {
+            "Item": "Honey",
+            "Amount": 4
+          }
+        ]
+      },
+      {
+        "Name": "OdinsDelight",
+        "Amount": 2,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 1,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "Raspberry",
+            "Amount": 4
+          },
+          {
+            "Item": "Honey",
+            "Amount": 4
+          },
+          {
+            "Item": "Cloudberry",
+            "amount": 4
+          },
+          {
+            "Item": "Blueberries",
+            "amount": 4
+          }
+        ]
+      }
+    ]
