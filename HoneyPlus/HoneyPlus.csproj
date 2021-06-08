@@ -153,7 +153,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Translations.cs" />
     <None Include="i18n.json" />
     <None Include="recipes.json" />
     <Compile Include="Properties\IgnoreAccessModifiers.cs" />
