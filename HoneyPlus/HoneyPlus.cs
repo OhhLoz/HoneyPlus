@@ -17,7 +17,7 @@ namespace HoneyPlus
   {
     public const string PluginGUID = "OhhLoz-HoneyPlus";
     public const string PluginName = "HoneyPlus";
-    public const string PluginVersion = "2.0.1";
+    public const string PluginVersion = "2.0.2";
 
     private const string AssetBundleName = "honeyplusassets";
     private const string RecipeFileName = "recipes.json";
@@ -62,9 +62,9 @@ namespace HoneyPlus
             LocalizationManager.Instance.AddJson("Russian", translationsToString);
             LocalizationManager.Instance.AddJson("Turkish", translationsToString);
             LocalizationManager.Instance.AddJson("Brazilian Portugese", translationsToString);
-        }
+    }
 
-        internal static class HoneyPlusLogger
+    internal static class HoneyPlusLogger
     {
       public static void LogMessage(object data) => Jotunn.Logger.LogMessage(data);
       public static void LogDebug(object data) => Jotunn.Logger.LogDebug(data);
