@@ -1,7 +1,7 @@
 ﻿# HoneyPlus  
 Valheim mod to add new Recipes using Honey, in my playthrough I found that I was accumulating far too much honey and this mod was to try to use that honey in other ways. I'm open to any suggestions.  
   
-Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPlus/releases) page here or on the [thunderstore](https://valheim.thunderstore.io/package/OhhLoz/HoneyPlus/).  
+Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPlus/releases) page here by dragging the contents of the zip inside a folder named "OhhLoz-HoneyPlus" in the bepinex plugin folder or on the [thunderstore](https://valheim.thunderstore.io/package/OhhLoz/HoneyPlus/)(recommended).  
   
 Adds:  
 * Honey Baked Bread (45HP, 75 Stamina, 4HP/S)  
