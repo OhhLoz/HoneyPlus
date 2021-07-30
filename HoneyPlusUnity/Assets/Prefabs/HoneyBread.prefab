@@ -199,13 +199,13 @@ MonoBehaviour:
     m_quality: 1
     m_variant: 0
     m_shared:
-      m_name: Honey Baked Bread
+      m_name: $custom_item_honeybread
       m_dlc: 
       m_itemType: 2
       m_icons:
-      - {fileID: 21300884, guid: 8acb5b7dd5925a14bb4d7490bb2005bc, type: 3}
+      - {fileID: 21300000, guid: 4e92d6d9daf65e94a8bcb80d002a5ea9, type: 3}
       m_attachOverride: 0
-      m_description: Bread baked using a honey glaze
+      m_description: $custom_item_honeybread_description
       m_maxStackSize: 20
       m_maxQuality: 1
       m_weight: 0.5
@@ -225,7 +225,7 @@ MonoBehaviour:
       m_food: 45
       m_foodStamina: 75
       m_foodBurnTime: 1800
-      m_foodRegen: 2
+      m_foodRegen: 4
       m_foodColor: {r: 1, g: 0.7922921, b: 0.5294118, a: 1}
       m_armorMaterial: {fileID: 0}
       m_helmetHideHair: 1

@@ -106,13 +106,13 @@ MonoBehaviour:
     m_quality: 1
     m_variant: 0
     m_shared:
-      m_name: Honey Sweetened Sausages
+      m_name: $custom_item_honeysausages
       m_dlc: 
       m_itemType: 2
       m_icons:
-      - {fileID: 21300328, guid: 8acb5b7dd5925a14bb4d7490bb2005bc, type: 3}
+      - {fileID: 21300000, guid: 7fc0f0f40a6d90d4d9af544c0b7cf2b4, type: 3}
       m_attachOverride: 0
-      m_description: Sausages sweetened with honey
+      m_description: $custom_item_honeysausages_description
       m_maxStackSize: 20
       m_maxQuality: 1
       m_weight: 0.5
@@ -132,7 +132,7 @@ MonoBehaviour:
       m_food: 65
       m_foodStamina: 45
       m_foodBurnTime: 1600
-      m_foodRegen: 3
+      m_foodRegen: 4
       m_foodColor: {r: 0.8088235, g: 0.4374175, b: 0.2438365, a: 1}
       m_armorMaterial: {fileID: 0}
       m_helmetHideHair: 1
