@@ -17,11 +17,12 @@ namespace HoneyPlus
   {
     public const string PluginGUID = "OhhLoz-HoneyPlus";
     public const string PluginName = "HoneyPlus";
-    public const string PluginVersion = "2.0.2";
+    public const string PluginVersion = "2.0.3";
 
     private const string AssetBundleName = "honeyplusassets";
     private const string RecipeFileName = "recipes.json";
-    private const string TranslationsFileName = "translations.json";
+    private const string enTranslationFileName = "translation_EN.json";
+    private const string cnTranslationFileName = "translation_CN.json";
 
     private static readonly string ModPath = Path.Combine(BepInEx.Paths.PluginPath, PluginGUID);
 
@@ -50,18 +51,13 @@ namespace HoneyPlus
     }
     private static void AddTranslations()
     {
-            string translationsPath = Path.Combine(ModPath, TranslationsFileName);
-            string translationsToString = AssetUtils.LoadText(translationsPath);
-            LocalizationManager.Instance.AddJson("English", translationsToString);
-            LocalizationManager.Instance.AddJson("Swedish", translationsToString);
-            LocalizationManager.Instance.AddJson("Simplified Chinese", translationsToString);
-            LocalizationManager.Instance.AddJson("Japanese", translationsToString);
-            LocalizationManager.Instance.AddJson("Polish", translationsToString);
-            LocalizationManager.Instance.AddJson("French", translationsToString);
-            LocalizationManager.Instance.AddJson("German", translationsToString);
-            LocalizationManager.Instance.AddJson("Russian", translationsToString);
-            LocalizationManager.Instance.AddJson("Turkish", translationsToString);
-            LocalizationManager.Instance.AddJson("Brazilian Portugese", translationsToString);
+            string enTranslationsPath = Path.Combine(ModPath, enTranslationFileName);
+            string enTranslation = AssetUtils.LoadText(enTranslationsPath);
+            LocalizationManager.Instance.AddJson("English", enTranslation);
+
+            string cnTranslationsPath = Path.Combine(ModPath, cnTranslationFileName);
+            string cnTranslation = AssetUtils.LoadText(cnTranslationsPath);
+            LocalizationManager.Instance.AddJson("Chinese", cnTranslation);
     }
 
     internal static class HoneyPlusLogger
