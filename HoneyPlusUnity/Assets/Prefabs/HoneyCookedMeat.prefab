@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 199174841701071258}
   - component: {fileID: 198775904461762047}
   m_Layer: 12
-  m_Name: CookedMeatHoney
+  m_Name: HoneyCookedMeat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251,13 +251,13 @@ MonoBehaviour:
     m_quality: 1
     m_variant: 0
     m_shared:
-      m_name: Honey Sweetened Meat
+      m_name: $custom_item_honeycookedmeat
       m_dlc: 
       m_itemType: 2
       m_icons:
-      - {fileID: 21300166, guid: 8acb5b7dd5925a14bb4d7490bb2005bc, type: 3}
+      - {fileID: 21300000, guid: c15c7463792bc8d48a8c6f2035b99874, type: 3}
       m_attachOverride: 0
-      m_description: Meat marinated and cooked with honey.
+      m_description: $custom_item_honeycookedmeat_description
       m_maxStackSize: 20
       m_maxQuality: 1
       m_weight: 1
@@ -277,7 +277,7 @@ MonoBehaviour:
       m_food: 45
       m_foodStamina: 35
       m_foodBurnTime: 1200
-      m_foodRegen: 2
+      m_foodRegen: 4
       m_foodColor: {r: 0.6691177, g: 0.4706287, b: 0.3837587, a: 1}
       m_armorMaterial: {fileID: 0}
       m_helmetHideHair: 1

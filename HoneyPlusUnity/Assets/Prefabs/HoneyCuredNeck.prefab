@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 199747327671978104}
   - component: {fileID: 198681419188880515}
   m_Layer: 12
-  m_Name: HoneyCookedNeck
+  m_Name: HoneyCuredNeck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,13 +230,13 @@ MonoBehaviour:
     m_quality: 1
     m_variant: 0
     m_shared:
-      m_name: $custom_item_honeycookedneck
+      m_name: $custom_item_honeycuredneck
       m_dlc: 
       m_itemType: 2
       m_icons:
       - {fileID: 21300000, guid: 6ae1f19e39092434390ec437921356ed, type: 3}
       m_attachOverride: 0
-      m_description: $custom_item_honeycookedneck_description
+      m_description: $custom_item_honeycuredneck_description
       m_maxStackSize: 20
       m_maxQuality: 1
       m_weight: 0.5
@@ -253,10 +253,10 @@ MonoBehaviour:
       m_setStatusEffect: {fileID: 0}
       m_equipStatusEffect: {fileID: 0}
       m_movementModifier: 0
-      m_food: 40
+      m_food: 30
       m_foodStamina: 25
       m_foodBurnTime: 1000
-      m_foodRegen: 4
+      m_foodRegen: 2
       m_foodColor: {r: 0.7720588, g: 0.5899456, b: 0.2724913, a: 1}
       m_armorMaterial: {fileID: 0}
       m_helmetHideHair: 1

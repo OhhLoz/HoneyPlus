@@ -229,13 +229,13 @@ MonoBehaviour:
     m_quality: 1
     m_variant: 0
     m_shared:
-      m_name: Teriyaki Salmon
+      m_name: $custom_item_honeyteriyakisalmon
       m_dlc: 
       m_itemType: 2
       m_icons:
-      - {fileID: 21300552, guid: 8acb5b7dd5925a14bb4d7490bb2005bc, type: 3}
+      - {fileID: 21300000, guid: 6aea4b0ff73b6a54fabfcda73283f594, type: 3}
       m_attachOverride: 0
-      m_description: Meat marinated and cooked with honey.
+      m_description: $custom_item_honeyteriyakisalmon_description
       m_maxStackSize: 20
       m_maxQuality: 1
       m_weight: 1
@@ -255,7 +255,7 @@ MonoBehaviour:
       m_food: 50
       m_foodStamina: 30
       m_foodBurnTime: 1200
-      m_foodRegen: 2
+      m_foodRegen: 4
       m_foodColor: {r: 0.8088235, g: 0.5226057, b: 0.3152033, a: 1}
       m_armorMaterial: {fileID: 0}
       m_helmetHideHair: 1

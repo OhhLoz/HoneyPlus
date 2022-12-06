@@ -106,13 +106,13 @@ MonoBehaviour:
     m_quality: 1
     m_variant: 0
     m_shared:
-      m_name: Honey Sweetened Lox Meat
+      m_name: $custom_item_honeycookedlox
       m_dlc: 
       m_itemType: 2
       m_icons:
-      - {fileID: 21300026, guid: 8acb5b7dd5925a14bb4d7490bb2005bc, type: 3}
+      - {fileID: 21300000, guid: b0092ee07d9add446bb3fb58750bab31, type: 3}
       m_attachOverride: 0
-      m_description: Meat marinated and cooked with honey.
+      m_description: $custom_item_honeycookedlox_description
       m_maxStackSize: 20
       m_maxQuality: 1
       m_weight: 1
@@ -132,7 +132,7 @@ MonoBehaviour:
       m_food: 75
       m_foodStamina: 45
       m_foodBurnTime: 2000
-      m_foodRegen: 3
+      m_foodRegen: 4
       m_foodColor: {r: 0.851, g: 0.6323543, b: 0.410182, a: 1}
       m_armorMaterial: {fileID: 0}
       m_helmetHideHair: 1
@@ -339,7 +339,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: e2d42868caf1e4c488480fa2ef613a9d, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

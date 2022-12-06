@@ -1,10 +1,10 @@
 {      
-	  "custom_item_honeybread": "Honey Baked Bread",
-	  "custom_item_honeybread_description": "Bread baked using a honey glaze",
+      "custom_item_honeybread": "Honey Baked Bread",
+      "custom_item_honeybread_description": "Bread baked using a honey glaze",
       "custom_item_honeycookedmeat": "Honey Glazed Meat",
-	  "custom_item_honeycookedmeat_description": "Meat marinated and cooked with honey.",
-	  "custom_item_honeycookedneck": "Honey Glazed Neck Tail",
-	  "custom_item_honeycookedneck_description": "Meat marinated and cooked with honey.",
+      "custom_item_honeycookedmeat_description": "Meat marinated and cooked with honey.",
+      "custom_item_honeycookedneck": "Honey Glazed Neck Tail",
+      "custom_item_honeycookedneck_description": "Meat marinated and cooked with honey.",
       "custom_item_honeycookedlox": "Honey Glazed Lox Meat",
       "custom_item_honeycookedlox_description": "Meat marinated and cooked with honey.",
       "custom_item_honeysausages": "Honey Sweetened Sausages",
@@ -16,5 +16,9 @@
       "custom_item_honeyteriyakisalmonwrap": "Teriyaki Salmon Wrap",
       "custom_item_honeyteriyakisalmonwrap_description": "Meat marinated and cooked with honey.",
       "custom_item_odinsdelight": "Odin's Delight",
-      "custom_item_odinsdelight_description": "A nutritious Jam using all components Valheim has to offer."
-    }
+      "custom_item_odinsdelight_description": "A nutritious Jam using all components Valheim has to offer.",      
+      "custom_item_honeycuredmeat": "Honey Cured Meat",
+      "custom_item_honeycuredmeat_description": "Meat dried and cured with honey.",
+      "custom_item_honeycuredneck": "Honey Cured Neck Tail",
+      "custom_item_honeycuredneck_description": "Meat dried and cured with honey."
+}

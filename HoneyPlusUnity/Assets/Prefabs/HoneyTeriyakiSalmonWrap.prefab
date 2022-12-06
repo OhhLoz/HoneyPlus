@@ -106,13 +106,13 @@ MonoBehaviour:
     m_quality: 1
     m_variant: 0
     m_shared:
-      m_name: Teriyaki Salmon Wrap
+      m_name: $custom_item_honeyteriyakisalmonwrap
       m_dlc: 
       m_itemType: 2
       m_icons:
-      - {fileID: 21300632, guid: 8acb5b7dd5925a14bb4d7490bb2005bc, type: 3}
+      - {fileID: 21300000, guid: b7cb174f0dd750e40bac093663baf185, type: 3}
       m_attachOverride: 0
-      m_description: Meat marinated and cooked with honey.
+      m_description: $custom_item_honeyteriyakisalmonwrap_description
       m_maxStackSize: 10
       m_maxQuality: 1
       m_weight: 1
