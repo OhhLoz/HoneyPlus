@@ -13,8 +13,7 @@ Adds:
 * Teriyaki Salmon (50HP, 30 Stamina, 4HP/S)  
 * Teriyaki Salmon Wrap (65HP, 95 Stamina, 4HP/S)  
 * Odin's Delight (50HP, 50 Stamina, 4HP/S)  
-* Honey Cured Neck Tail (30HP, 25 Stamina, 2HP/S)  
-* Honey Cured Meat (30HP, 30 Stamina, 2HP/S)  
+* Honey Cured Neck Tail (20HP, 20 Stamina, 4HP/S)  
   
 ## License  
   
