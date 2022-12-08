@@ -176,22 +176,5 @@
             "Amount": 2
           }
         ]
-      },
-      {
-        "Name": "HoneyCuredMeat",
-        "Amount": 1,
-        "CraftingStation": null,
-        "MinStationLevel": 1,
-        "Enabled": true,
-        "Requirements": [
-          {
-            "Item": "RawMeat",
-            "Amount": 1
-          },
-          {
-            "Item": "Honey",
-            "Amount": 2
-          }
-        ]
       }
     ]
