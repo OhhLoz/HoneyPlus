@@ -14,6 +14,7 @@ Adds:
 * Teriyaki Salmon Wrap (65HP, 95 Stamina, 4HP/S)  
 * Odin's Delight (50HP, 50 Stamina, 4HP/S)  
 * Honey Cured Neck Tail (20HP, 8 Stamina, 4HP/S)  
+* Honey Mushroom Miso Soup (20HP, 60 Stamina, 4HP/S)  
   
 ## License  
   
