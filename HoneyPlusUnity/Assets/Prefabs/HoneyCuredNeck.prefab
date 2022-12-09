@@ -253,10 +253,10 @@ MonoBehaviour:
       m_setStatusEffect: {fileID: 0}
       m_equipStatusEffect: {fileID: 0}
       m_movementModifier: 0
-      m_food: 30
-      m_foodStamina: 25
+      m_food: 20
+      m_foodStamina: 8
       m_foodBurnTime: 1000
-      m_foodRegen: 2
+      m_foodRegen: 4
       m_foodColor: {r: 0.7720588, g: 0.5899456, b: 0.2724913, a: 1}
       m_armorMaterial: {fileID: 0}
       m_helmetHideHair: 1
