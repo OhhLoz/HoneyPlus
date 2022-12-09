@@ -46,6 +46,7 @@ namespace HoneyPlus
           GameObject prefab = HoneyPlusAssetBundle.LoadAsset<GameObject>(itemConfig.Name);
           CustomItem customItem = new CustomItem(prefab, true, itemConfig);
           ItemManager.Instance.AddItem(customItem);
+          Jotunn.Logger.LogInfo("Loaded Item: " + itemConfig.Name);
         }
       }
     }

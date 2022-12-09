@@ -176,5 +176,26 @@
             "Amount": 2
           }
         ]
+      },
+      {
+        "Name": "HoneyMushroomSoup",
+        "Amount": 2,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 1,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "Mushroom",
+            "Amount": 4
+          },
+          {
+            "Item": "MushroomYellow",
+            "Amount": 4
+          },
+          {
+            "Item": "Honey",
+            "Amount": 4
+          }
+        ]
       }
     ]
