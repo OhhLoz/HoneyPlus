@@ -31,17 +31,20 @@ namespace HoneyPlus
     private void Awake()
     {
       AddCustomItems();
-      AddTranslations();
+      AddLocalizations();
     }
 
     private void AddCustomItems()
     {
-      string RecipePath = Path.Combine(ModPath, RecipeFileName);
       Assembly ModAssembly = typeof(HoneyPlus).Assembly;
       AssetBundle HoneyPlusAssetBundle = AssetUtils.LoadAssetBundleFromResources(AssetBundleName, ModAssembly);
-      List<ItemConfig> itemConfigs = ItemConfig.ListFromJson(AssetUtils.LoadText(RecipePath));
+      Jotunn.Logger.LogInfo($"Loaded asset bundle: {HoneyPlusAssetBundle}");
 
-      foreach(ItemConfig itemConfig in itemConfigs)
+      string RecipePath = Path.Combine(ModPath, RecipeFileName);
+      List<ItemConfig> itemConfigs = ItemConfig.ListFromJson(AssetUtils.LoadText(RecipePath));
+      Jotunn.Logger.LogInfo("Loaded recipes list");
+
+      foreach (ItemConfig itemConfig in itemConfigs)
       {
         if (HoneyPlusAssetBundle.Contains(itemConfig.Name))
         {
@@ -53,24 +56,18 @@ namespace HoneyPlus
 
       HoneyPlusAssetBundle.Unload(false);
     }
-    private void AddTranslations()
+    private void AddLocalizations()
     {
-            Localization = new CustomLocalization();
-            LocalizationManager.Instance.AddLocalization(Localization);
+        Localization = new CustomLocalization();
+        LocalizationManager.Instance.AddLocalization(Localization);
 
-            string enTranslationsPath = Path.Combine(ModPath, enTranslationFileName);
-            string enTranslation = AssetUtils.LoadText(enTranslationsPath);
-            Localization.AddJsonFile("English", enTranslation);
+        string enTranslationsPath = Path.Combine(ModPath, enTranslationFileName);
+        string enTranslation = AssetUtils.LoadText(enTranslationsPath);
+        Localization.AddJsonFile("English", enTranslation);
 
-            string cnTranslationsPath = Path.Combine(ModPath, cnTranslationFileName);
-            string cnTranslation = AssetUtils.LoadText(cnTranslationsPath);
-            Localization.AddJsonFile("Chinese", cnTranslation);
-        }
-
-    internal static class HoneyPlusLogger
-    {
-      public static void LogMessage(object data) => Jotunn.Logger.LogMessage(data);
-      public static void LogDebug(object data) => Jotunn.Logger.LogDebug(data);
+        string cnTranslationsPath = Path.Combine(ModPath, cnTranslationFileName);
+        string cnTranslation = AssetUtils.LoadText(cnTranslationsPath);
+        Localization.AddJsonFile("Chinese", cnTranslation);
     }
   }
 }
