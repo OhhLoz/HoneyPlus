@@ -1,7 +1,7 @@
 ﻿# HoneyPlus  
 Valheim mod to add new Recipes using Honey, in my playthrough I found that I was accumulating far too much honey and this mod was to try to use that honey in other ways. I'm open to any suggestions.  
   
-Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPlus/releases) page here by dragging the contents of the zip inside a folder named "OhhLoz-HoneyPlus" in the bepinex plugin folder or on the [thunderstore](https://valheim.thunderstore.io/package/OhhLoz/HoneyPlus/)(recommended).  
+Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPlus/releases) page by extracting the contents of the "files" folder inside the .zip to a folder name "OhhLoz-HoneyPlus" inside the BepInEx/Plugins folder or on the [thunderstore](https://valheim.thunderstore.io/package/OhhLoz/HoneyPlus/)(recommended).  
   
 Adds:  
 * Honey Baked Bread (45HP, 75 Stamina, 4HP/S)  
@@ -13,7 +13,7 @@ Adds:
 * Teriyaki Salmon (50HP, 30 Stamina, 4HP/S)  
 * Teriyaki Salmon Wrap (65HP, 95 Stamina, 4HP/S)  
 * Odin's Delight (50HP, 50 Stamina, 4HP/S)  
-* Honey Cured Neck Tail (20HP, 8 Stamina, 4HP/S)  
+* Honey Cured Neck Jerky (20HP, 8 Stamina, 4HP/S)  
 * Honey Mushroom Miso Soup (20HP, 60 Stamina, 4HP/S)  
   
 ## License  
