@@ -31,6 +31,7 @@ namespace HoneyPlus
     private void Awake()
     {
       AddCustomItems();
+      AddRecipes();
       AddLocalizations();
     }
 
@@ -41,20 +42,27 @@ namespace HoneyPlus
       Jotunn.Logger.LogInfo($"Loaded asset bundle: {HoneyPlusAssetBundle}");
 
       string RecipePath = Path.Combine(ModPath, RecipeFileName);
-      List<ItemConfig> itemConfigs = ItemConfig.ListFromJson(AssetUtils.LoadText(RecipePath));
+      List<RecipeConfig> recipeConfigs = RecipeConfig.ListFromJson(AssetUtils.LoadText(RecipePath));
       Jotunn.Logger.LogInfo("Loaded recipes list");
 
-      foreach (ItemConfig itemConfig in itemConfigs)
-      {
-        if (HoneyPlusAssetBundle.Contains(itemConfig.Name))
+        foreach (RecipeConfig recipeConfig in recipeConfigs)
         {
-          CustomItem customItem = new CustomItem(HoneyPlusAssetBundle, itemConfig.Name, false, itemConfig);
-          ItemManager.Instance.AddItem(customItem);
-          Jotunn.Logger.LogInfo("Loaded Item: " + itemConfig.Name);
+            if (HoneyPlusAssetBundle.Contains(recipeConfig.Item))
+            {
+                CustomItem customItem = new CustomItem(HoneyPlusAssetBundle.LoadAsset<GameObject>(recipeConfig.Item), false);
+                ItemManager.Instance.AddItem(customItem);
+                Jotunn.Logger.LogInfo("Loaded Item: " + recipeConfig.Item);
+            }
         }
-      }
 
-      HoneyPlusAssetBundle.Unload(false);
+        HoneyPlusAssetBundle.Unload(false);
+    }
+
+    private void AddRecipes()
+    {
+        string RecipePath = Path.Combine(ModPath, RecipeFileName);
+        ItemManager.Instance.AddRecipesFromJson(RecipePath);
+        Jotunn.Logger.LogInfo("Loaded all recipes");
     }
     private void AddLocalizations()
     {
