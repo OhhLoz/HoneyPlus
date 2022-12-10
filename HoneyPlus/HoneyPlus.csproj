@@ -78,6 +78,10 @@
     <Reference Include="BepInEx">
       <HintPath>..\libs\BepInEx.dll</HintPath>
     </Reference>
+    <Reference Include="BepInEx, Version=5.4.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\BepInEx.dll</HintPath>
+    </Reference>
     <Reference Include="BepInEx.MonoMod.HookGenPatcher">
       <HintPath>..\libs\BepInEx.MonoMod.HookGenPatcher.dll</HintPath>
     </Reference>
@@ -87,8 +91,9 @@
     <Reference Include="fastJSON">
       <HintPath>..\libs\fastJSON.dll</HintPath>
     </Reference>
-    <Reference Include="Jotunn, Version=2.0.12.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\JotunnLib.2.0.12\lib\net462\Jotunn.dll</HintPath>
+    <Reference Include="Jotunn, Version=2.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Jotunn.dll</HintPath>
     </Reference>
     <Reference Include="MMHOOK_assembly_googleanalytics">
       <HintPath>..\libs\MMHOOK_assembly_googleanalytics.dll</HintPath>
