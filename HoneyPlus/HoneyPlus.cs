@@ -17,7 +17,7 @@ namespace HoneyPlus
   {
     public const string PluginGUID = "OhhLoz-HoneyPlus";
     public const string PluginName = "HoneyPlus";
-    public const string PluginVersion = "2.0.3";
+    public const string PluginVersion = "2.0.9";
 
     private const string AssetBundleName = "honeyplusassets";
     private const string RecipeFileName = "recipes.json";
@@ -26,45 +26,56 @@ namespace HoneyPlus
 
     private static readonly string ModPath = Path.Combine(BepInEx.Paths.PluginPath, PluginGUID);
 
+    private CustomLocalization Localization;
+
     private void Awake()
     {
       AddCustomItems();
-      AddTranslations();
+      AddRecipes();
+      AddLocalizations();
     }
 
-    private static void AddCustomItems()
+    private void AddCustomItems()
     {
-      string RecipePath = Path.Combine(ModPath, RecipeFileName);
       Assembly ModAssembly = typeof(HoneyPlus).Assembly;
       AssetBundle HoneyPlusAssetBundle = AssetUtils.LoadAssetBundleFromResources(AssetBundleName, ModAssembly);
-      List<ItemConfig> itemConfigs = ItemConfig.ListFromJson(AssetUtils.LoadText(RecipePath));
+      Jotunn.Logger.LogInfo($"Loaded asset bundle: {HoneyPlusAssetBundle}");
 
-      foreach(ItemConfig itemConfig in itemConfigs)
-      {
-        if (HoneyPlusAssetBundle.Contains(itemConfig.Name))
+      string RecipePath = Path.Combine(ModPath, RecipeFileName);
+      List<RecipeConfig> recipeConfigs = RecipeConfig.ListFromJson(AssetUtils.LoadText(RecipePath));
+      Jotunn.Logger.LogInfo("Loaded recipes list");
+
+        foreach (RecipeConfig recipeConfig in recipeConfigs)
         {
-          GameObject prefab = HoneyPlusAssetBundle.LoadAsset<GameObject>(itemConfig.Name);
-          CustomItem customItem = new CustomItem(prefab, true, itemConfig);
-          ItemManager.Instance.AddItem(customItem);
-          Jotunn.Logger.LogInfo("Loaded Item: " + itemConfig.Name);
+            if (HoneyPlusAssetBundle.Contains(recipeConfig.Item))
+            {
+                CustomItem customItem = new CustomItem(HoneyPlusAssetBundle.LoadAsset<GameObject>(recipeConfig.Item), false);
+                ItemManager.Instance.AddItem(customItem);
+                Jotunn.Logger.LogInfo("Loaded Item: " + recipeConfig.Item);
+            }
         }
-      }
-    }
-    private static void AddTranslations()
-    {
-            string enTranslationsPath = Path.Combine(ModPath, enTranslationFileName);
-            string enTranslation = AssetUtils.LoadText(enTranslationsPath);
-            LocalizationManager.Instance.AddJson("English", enTranslation);
 
-            string cnTranslationsPath = Path.Combine(ModPath, cnTranslationFileName);
-            string cnTranslation = AssetUtils.LoadText(cnTranslationsPath);
-            LocalizationManager.Instance.AddJson("Chinese", cnTranslation);
+        HoneyPlusAssetBundle.Unload(false);
     }
 
-    internal static class HoneyPlusLogger
+    private void AddRecipes()
     {
-      public static void LogMessage(object data) => Jotunn.Logger.LogMessage(data);
-      public static void LogDebug(object data) => Jotunn.Logger.LogDebug(data);
+        string RecipePath = Path.Combine(ModPath, RecipeFileName);
+        ItemManager.Instance.AddRecipesFromJson(RecipePath);
+        Jotunn.Logger.LogInfo("Loaded all recipes");
+    }
+    private void AddLocalizations()
+    {
+        Localization = new CustomLocalization();
+        LocalizationManager.Instance.AddLocalization(Localization);
+
+        string enTranslationsPath = Path.Combine(ModPath, enTranslationFileName);
+        string enTranslation = AssetUtils.LoadText(enTranslationsPath);
+        Localization.AddJsonFile("English", enTranslation);
+
+        string cnTranslationsPath = Path.Combine(ModPath, cnTranslationFileName);
+        string cnTranslation = AssetUtils.LoadText(cnTranslationsPath);
+        Localization.AddJsonFile("Chinese", cnTranslation);
     }
   }
 }

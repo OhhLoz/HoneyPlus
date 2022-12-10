@@ -1,6 +1,7 @@
 ﻿[
       {
-        "Name": "HoneyBread",
+        "Name": "$custom_item_honeybread",
+        "Item": "HoneyBread",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
@@ -17,7 +18,8 @@
         ]
       },
       {
-        "Name": "HoneyCookedMeat",
+        "Name": "$custom_item_honeycookedmeat",
+        "Item": "HoneyCookedMeat",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
@@ -34,7 +36,8 @@
         ]
       },
       {
-        "Name": "HoneyCookedNeck",
+        "Name": "$custom_item_honeycookedneck",
+        "Item": "HoneyCookedNeck",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
@@ -51,7 +54,8 @@
         ]
       },
       {
-        "Name": "HoneyCookedLox",
+        "Name": "$custom_item_honeycookedlox",
+        "Item": "HoneyCookedLox",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
@@ -68,7 +72,8 @@
         ]
       },
       {
-        "Name": "HoneySausages",
+        "Name": "$custom_item_honeysausages",
+        "Item": "HoneySausages",
         "Amount": 4,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
@@ -85,7 +90,8 @@
         ]
       },
       {
-        "Name": "HoneySerpentMeat",
+        "Name": "$custom_item_honeyserpentmeat",
+        "Item": "HoneySerpentMeat",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
@@ -102,7 +108,8 @@
         ]
       },
       {
-        "Name": "HoneyTeriyakiSalmon",
+        "Name": "$custom_item_honeyteriyakisalmon",
+        "Item": "HoneyTeriyakiSalmon",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
@@ -119,7 +126,8 @@
         ]
       },
       {
-        "Name": "HoneyTeriyakiSalmonWrap",
+        "Name": "$custom_item_honeyteriyakisalmonwrap",
+        "Item": "HoneyTeriyakiSalmonWrap",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
@@ -136,7 +144,8 @@
         ]
       },
       {
-        "Name": "OdinsDelight",
+        "Name": "$custom_item_odinsdelight",
+        "Item": "OdinsDelight",
         "Amount": 2,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
@@ -161,7 +170,8 @@
         ]
       },
       {
-        "Name": "HoneyCuredNeck",
+        "Name": "$custom_item_honeycuredneck",
+        "Item": "HoneyCuredNeck",
         "Amount": 1,
         "CraftingStation": null,
         "MinStationLevel": 1,
@@ -178,7 +188,8 @@
         ]
       },
       {
-        "Name": "HoneyMushroomSoup",
+        "Name": "$custom_item_honeymushroomsoup",
+        "Item": "HoneyMushroomSoup",
         "Amount": 2,
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
