@@ -286,11 +286,11 @@
         "Item": "HoneyCookedHare",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
-        "MinStationLevel": 4,
+        "MinStationLevel": 5,
         "Enabled": true,
         "Requirements": [
           {
-            "Item": "cookedharemeat",
+            "Item": "CookedHareMeat",
             "Amount": 1
           },
           {
@@ -304,11 +304,11 @@
         "Item": "HoneyCookedSeeker",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
-        "MinStationLevel": 4,
+        "MinStationLevel": 5,
         "Enabled": true,
         "Requirements": [
           {
-            "Item": "cookedbugmeat",
+            "Item": "CookedBugMeat",
             "Amount": 1
           },
           {
