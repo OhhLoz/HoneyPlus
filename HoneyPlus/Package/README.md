@@ -1,24 +1,31 @@
 # HoneyPlus  
 Valheim mod to add new Recipes using Honey, in my playthrough I found that I was accumulating far too much honey and this mod was to try to use that honey in other ways. I'm open to any suggestions.  
   
-Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPlus/releases) page by extracting the contents of the "files" folder inside the .zip to a folder name "OhhLoz-HoneyPlus" inside the BepInEx/Plugins folder or on the [thunderstore](https://valheim.thunderstore.io/package/OhhLoz/HoneyPlus/)(recommended).  
+Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPlus/releases) page by extracting the contents of the .zip inside the BepInEx/Plugins folder, on the [nexus](https://www.nexusmods.com/valheim/mods/2063) or on the [thunderstore](https://valheim.thunderstore.io/package/OhhLoz/HoneyPlus/)(recommended).  
   
-Adds:  
-* Honey Baked Bread (45HP, 75 Stamina, 4HP/S)  
-* Honey Glazed Meat (45HP, 35 Stamina, 4HP/S)  
-* Honey Glazed Neck Tail (40HP, 25 Stamina, 4HP/S)  
-* Honey Glazed Lox Meat (75HP, 45 Stamina, 4HP/S)  
-* Honey Sweetened Sausages (65HP, 45 Stamina, 4HP/S)  
-* Honey Glazed Serpent Meat (75HP, 45 Stamina, 4HP/S)  
+Adds to the Cauldron:  
+* Honey Baked Bread (33HP, 75 Stamina, 4HP/S)  
+* Honey Glazed Meat (40HP, 30 Stamina, 4HP/S)  
+* Honey Glazed Neck Tail (35HP, 25 Stamina, 4HP/S)  
+* Honey Glazed Lox Meat (60HP, 30 Stamina, 4HP/S)  
+* Honey Sweetened Sausages (60HP, 33 Stamina, 4HP/S)  
+* Honey Glazed Serpent Meat (75HP, 35 Stamina, 4HP/S)  
 * Teriyaki Salmon (50HP, 30 Stamina, 4HP/S)  
-* Teriyaki Salmon Wrap (65HP, 95 Stamina, 4HP/S)  
-* Odin's Delight (50HP, 50 Stamina, 4HP/S)  
-* Honey Cured Neck Jerky (20HP, 8 Stamina, 4HP/S)  
-* Honey Mushroom Miso Soup (20HP, 60 Stamina, 4HP/S)  
+* Teriyaki Salmon Wrap (70HP, 35 Stamina, 4HP/S)  
+* Odin's Delight (35HP, 40 Stamina, 4HP/S)  
+* Honey Mushroom Miso Soup (25HP, 45 Stamina, 4HP/S)  
+* Honey Glazed Wolf Meat (55HP, 30 Stamina, 4HP/S)  
+* Honey Glazed Hare Meat (65HP, 30 Stamina, 5HP/S)  
+* Honey Glazed Seeker Meat (65HP, 30 Stamina, 5HP/S)  
+  
+Adds to hand crafting:  
+* Neck Jerky (18HP, 18 Stamina, 2HP/S)  
+* Deer Jerky (26HP, 26 Stamina, 2HP/S)  
+* Lox Jerky (38HP, 38 Stamina, 4HP/S)  
   
 ## License  
   
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details  
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](https://github.com/OhhLoz/HoneyPlus/blob/master/LICENSE) file for details  
   
 ## Acknowledgments  
   
