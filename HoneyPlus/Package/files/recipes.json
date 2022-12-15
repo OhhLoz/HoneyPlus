@@ -4,7 +4,7 @@
         "Item": "HoneyBread",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
-        "MinStationLevel": 1,
+        "MinStationLevel": 4,
         "Enabled": true,
         "Requirements": [
           {
@@ -58,7 +58,7 @@
         "Item": "HoneyCookedLox",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
-        "MinStationLevel": 1,
+        "MinStationLevel": 4,
         "Enabled": true,
         "Requirements": [
           {
@@ -76,7 +76,7 @@
         "Item": "HoneySausages",
         "Amount": 4,
         "CraftingStation": "piece_cauldron",
-        "MinStationLevel": 1,
+        "MinStationLevel": 2,
         "Enabled": true,
         "Requirements": [
           {
@@ -94,7 +94,7 @@
         "Item": "HoneySerpentMeat",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
-        "MinStationLevel": 1,
+        "MinStationLevel": 2,
         "Enabled": true,
         "Requirements": [
           {
@@ -130,7 +130,7 @@
         "Item": "HoneyTeriyakiSalmonWrap",
         "Amount": 1,
         "CraftingStation": "piece_cauldron",
-        "MinStationLevel": 1,
+        "MinStationLevel": 3,
         "Enabled": true,
         "Requirements": [
           {
@@ -171,7 +171,7 @@
       },
       {
         "Name": "$custom_item_honeycuredneck",
-        "Item": "HoneyCuredNeck",
+        "Item": "HoneyNeckJerky",
         "Amount": 1,
         "CraftingStation": null,
         "MinStationLevel": 1,
@@ -183,7 +183,7 @@
           },
           {
             "Item": "Honey",
-            "Amount": 2
+            "Amount": 1
           }
         ]
       },
@@ -202,6 +202,114 @@
           {
             "Item": "MushroomYellow",
             "Amount": 4
+          },
+          {
+            "Item": "Honey",
+            "Amount": 4
+          }
+        ]
+      },
+      {
+        "Name": "$custom_item_honeycuredlox",
+        "Item": "HoneyLoxJerky",
+        "Amount": 1,
+        "CraftingStation": null,
+        "MinStationLevel": 1,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "LoxMeat",
+            "Amount": 1
+          },
+          {
+            "Item": "Honey",
+            "Amount": 2
+          }
+        ]
+      },
+      {
+        "Name": "$custom_item_honeycureddeer",
+        "Item": "HoneyDeerJerky",
+        "Amount": 1,
+        "CraftingStation": null,
+        "MinStationLevel": 1,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "DeerMeat",
+            "Amount": 1
+          },
+          {
+            "Item": "Honey",
+            "Amount": 1
+          }
+        ]
+      },
+      {
+        "Name": "$custom_item_honeycookeddeer",
+        "Item": "HoneyCookedDeer",
+        "Amount": 1,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 1,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "CookedDeerMeat",
+            "Amount": 1
+          },
+          {
+            "Item": "Honey",
+            "Amount": 2
+          }
+        ]
+      },
+      {
+        "Name": "$custom_item_honeycookedWolf",
+        "Item": "HoneyCookedWolf",
+        "Amount": 1,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 3,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "CookedWolfMeat",
+            "Amount": 1
+          },
+          {
+            "Item": "Honey",
+            "Amount": 4
+          }
+        ]
+      },
+      {
+        "Name": "$custom_item_honeycookedhare",
+        "Item": "HoneyCookedHare",
+        "Amount": 1,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 4,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "cookedharemeat",
+            "Amount": 1
+          },
+          {
+            "Item": "Honey",
+            "Amount": 4
+          }
+        ]
+      },
+      {
+        "Name": "$custom_item_honeycookedseeker",
+        "Item": "HoneyCookedSeeker",
+        "Amount": 1,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 4,
+        "Enabled": true,
+        "Requirements": [
+          {
+            "Item": "cookedbugmeat",
+            "Amount": 1
           },
           {
             "Item": "Honey",
