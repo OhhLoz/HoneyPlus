@@ -1,4 +1,4 @@
-﻿# HoneyPlus  
+# HoneyPlus  
 Valheim mod to add new Recipes using Honey, in my playthrough I found that I was accumulating far too much honey and this mod was to try to use that honey in other ways. I'm open to any suggestions.  
   
 MUST be installed on both the client and the server  
