@@ -158,14 +158,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="i18n.json" />
-    <None Include="recipes.json" />
+    <EmbeddedResource Include="honeyplusassets" />
+    <EmbeddedResource Include="recipes.json" />
     <Compile Include="Properties\IgnoreAccessModifiers.cs" />
     <Compile Include="HoneyPlus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="translation_CN.json" />
+    <EmbeddedResource Include="translation_EN.json" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="honeyplusassets" />
     <None Include="packages.config" />
     <None Include="Package\README.md" />
   </ItemGroup>

@@ -6,7 +6,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 4,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "Bread",
             "Amount": 1
@@ -24,7 +25,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "CookedMeat",
             "Amount": 1
@@ -42,7 +44,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "NeckTailGrilled",
             "Amount": 1
@@ -60,7 +63,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 4,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "CookedLoxMeat",
             "Amount": 1
@@ -78,7 +82,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 2,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "Sausages",
             "Amount": 4
@@ -96,7 +101,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 2,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "SerpentMeatCooked",
             "Amount": 1
@@ -114,7 +120,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "FishCooked",
             "Amount": 1
@@ -132,7 +139,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 3,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "FishWraps",
             "Amount": 1
@@ -150,7 +158,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "Raspberry",
             "Amount": 4
@@ -176,7 +185,8 @@
         "CraftingStation": null,
         "MinStationLevel": 1,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "NeckTail",
             "Amount": 1
@@ -194,7 +204,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "Mushroom",
             "Amount": 4
@@ -216,7 +227,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 4,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "LoxMeat",
             "Amount": 1
@@ -234,14 +246,15 @@
         "CraftingStation": null,
         "MinStationLevel": 1,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "DeerMeat",
             "Amount": 1
           },
           {
             "Item": "Honey",
-            "Amount": 1
+            "Amount": 2
           }
         ]
       },
@@ -252,7 +265,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 1,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "CookedDeerMeat",
             "Amount": 1
@@ -270,7 +284,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 3,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "CookedWolfMeat",
             "Amount": 1
@@ -288,7 +303,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 5,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "CookedHareMeat",
             "Amount": 1
@@ -306,7 +322,8 @@
         "CraftingStation": "piece_cauldron",
         "MinStationLevel": 5,
         "Enabled": true,
-        "Requirements": [
+        "Requirements": 
+        [
           {
             "Item": "CookedBugMeat",
             "Amount": 1

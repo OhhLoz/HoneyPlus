@@ -17,7 +17,7 @@ namespace HoneyPlus
   {
     public const string PluginGUID = "OhhLoz-HoneyPlus";
     public const string PluginName = "HoneyPlus";
-    public const string PluginVersion = "3.0.2";
+    public const string PluginVersion = "3.0.3";
 
     private const string AssetBundleName = "honeyplusassets";
     private const string RecipeFileName = "recipes.json";
@@ -27,23 +27,22 @@ namespace HoneyPlus
     private static readonly string ModPath = Path.Combine(BepInEx.Paths.PluginPath, PluginGUID);
 
     private CustomLocalization Localization;
+    private Assembly ModAssembly;
 
     private void Awake()
     {
+      ModAssembly = typeof(HoneyPlus).Assembly;
       AddCustomItems();
-      AddRecipes();
       AddLocalizations();
     }
 
     private void AddCustomItems()
     {
-      Assembly ModAssembly = typeof(HoneyPlus).Assembly;
-      AssetBundle HoneyPlusAssetBundle = AssetUtils.LoadAssetBundleFromResources(AssetBundleName, ModAssembly);
-      Jotunn.Logger.LogInfo($"Loaded asset bundle: {HoneyPlusAssetBundle}");
+        AssetBundle HoneyPlusAssetBundle = AssetUtils.LoadAssetBundleFromResources(AssetBundleName, ModAssembly);
+        Jotunn.Logger.LogInfo($"Loaded asset bundle: {HoneyPlusAssetBundle}");
 
-      string RecipePath = Path.Combine(ModPath, RecipeFileName);
-      List<RecipeConfig> recipeConfigs = RecipeConfig.ListFromJson(AssetUtils.LoadText(RecipePath));
-      Jotunn.Logger.LogInfo("Loaded recipes list");
+        List<RecipeConfig> recipeConfigs = RecipeConfig.ListFromJson(AssetUtils.LoadTextFromResources(RecipeFileName, ModAssembly));
+        Jotunn.Logger.LogInfo("Loaded recipes list");
 
         foreach (RecipeConfig recipeConfig in recipeConfigs)
         {
@@ -51,6 +50,7 @@ namespace HoneyPlus
             {
                 CustomItem customItem = new CustomItem(HoneyPlusAssetBundle.LoadAsset<GameObject>(recipeConfig.Item), false);
                 ItemManager.Instance.AddItem(customItem);
+                ItemManager.Instance.AddRecipe(new CustomRecipe(recipeConfig));
                 Jotunn.Logger.LogInfo("Loaded Item: " + recipeConfig.Item);
             }
         }
@@ -58,23 +58,15 @@ namespace HoneyPlus
         HoneyPlusAssetBundle.Unload(false);
     }
 
-    private void AddRecipes()
-    {
-        string RecipePath = Path.Combine(ModPath, RecipeFileName);
-        ItemManager.Instance.AddRecipesFromJson(RecipePath);
-        Jotunn.Logger.LogInfo("Loaded all recipes");
-    }
     private void AddLocalizations()
     {
         Localization = new CustomLocalization();
         LocalizationManager.Instance.AddLocalization(Localization);
 
-        string enTranslationsPath = Path.Combine(ModPath, enTranslationFileName);
-        string enTranslation = AssetUtils.LoadText(enTranslationsPath);
+        string enTranslation = AssetUtils.LoadTextFromResources(enTranslationFileName, ModAssembly);
         Localization.AddJsonFile("English", enTranslation);
 
-        string cnTranslationsPath = Path.Combine(ModPath, cnTranslationFileName);
-        string cnTranslation = AssetUtils.LoadText(cnTranslationsPath);
+        string cnTranslation = AssetUtils.LoadTextFromResources(cnTranslationFileName, ModAssembly);
         Localization.AddJsonFile("Chinese", cnTranslation);
     }
   }
