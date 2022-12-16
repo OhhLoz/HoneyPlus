@@ -1,27 +1,30 @@
 # HoneyPlus  
 Valheim mod to add new Recipes using Honey, in my playthrough I found that I was accumulating far too much honey and this mod was to try to use that honey in other ways. I'm open to any suggestions.  
   
+MUST be installed on both the client and the server  
+  
 Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPlus/releases) page by extracting the contents of the .zip inside the BepInEx/Plugins folder, on the [nexus](https://www.nexusmods.com/valheim/mods/2063) or on the [thunderstore](https://valheim.thunderstore.io/package/OhhLoz/HoneyPlus/)(recommended).  
   
 Adds to the Cauldron:  
-* Honey Baked Bread (33HP, 75 Stamina, 4HP/S)  
-* Honey Glazed Meat (40HP, 30 Stamina, 4HP/S)  
-* Honey Glazed Neck Tail (35HP, 25 Stamina, 4HP/S)  
-* Honey Glazed Lox Meat (60HP, 30 Stamina, 4HP/S)  
-* Honey Sweetened Sausages (60HP, 33 Stamina, 4HP/S)  
-* Honey Glazed Serpent Meat (75HP, 35 Stamina, 4HP/S)  
-* Teriyaki Salmon (50HP, 30 Stamina, 4HP/S)  
-* Teriyaki Salmon Wrap (70HP, 35 Stamina, 4HP/S)  
-* Odin's Delight (35HP, 40 Stamina, 4HP/S)  
+* Honey Glazed Boar Meat (35HP, 15 Stamina, 4HP/S)  
+* Honey Glazed Deer Meat (40HP, 17 Stamina, 4HP/S)  
+* Honey Glazed Neck Tail (30HP, 13 Stamina, 4HP/S)  
+* Honey Glazed Lox Meat (55HP, 20 Stamina, 5HP/S)  
+* Honey Glazed Wolf Meat (50HP, 20 Stamina, 4HP/S)  
+* Honey Glazed Hare Meat (65HP, 25 Stamina, 6HP/S)  
+* Honey Glazed Seeker Meat (65HP, 25 Stamina, 6HP/S)  
+* Honey Glazed Serpent Meat (75HP, 28 Stamina, 4HP/S)  
+* Honey Sweetened Sausages (60HP, 25 Stamina, 4HP/S)  
+* Teriyaki Salmon (50HP, 20 Stamina, 4HP/S)  
+* Teriyaki Salmon Wrap (75HP, 30 Stamina, 5HP/S)  
+* Odin's Delight (30HP, 40 Stamina, 4HP/S)  
 * Honey Mushroom Miso Soup (25HP, 45 Stamina, 4HP/S)  
-* Honey Glazed Wolf Meat (55HP, 30 Stamina, 4HP/S)  
-* Honey Glazed Hare Meat (65HP, 30 Stamina, 5HP/S)  
-* Honey Glazed Seeker Meat (65HP, 30 Stamina, 5HP/S)  
+* Honey Baked Bread (28HP, 75 Stamina, 4HP/S)  
+* Lox Jerky (32HP, 32 Stamina, 4HP/S)  
   
 Adds to hand crafting:  
-* Neck Jerky (18HP, 18 Stamina, 2HP/S)  
-* Deer Jerky (26HP, 26 Stamina, 2HP/S)  
-* Lox Jerky (38HP, 38 Stamina, 4HP/S)  
+* Neck Jerky (15HP, 15 Stamina, 2HP/S)  
+* Deer Jerky (24HP, 24 Stamina, 2HP/S)  
   
 ## License  
   

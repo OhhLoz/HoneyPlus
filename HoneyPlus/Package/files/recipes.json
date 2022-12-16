@@ -213,8 +213,8 @@
         "Name": "$custom_item_honeycuredlox",
         "Item": "HoneyLoxJerky",
         "Amount": 1,
-        "CraftingStation": null,
-        "MinStationLevel": 1,
+        "CraftingStation": "piece_cauldron",
+        "MinStationLevel": 4,
         "Enabled": true,
         "Requirements": [
           {
