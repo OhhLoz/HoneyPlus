@@ -6,6 +6,7 @@ Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPl
 Adds to the Cauldron:  
 * Honey Baked Bread (33HP, 75 Stamina, 4HP/S)  
 * Honey Glazed Meat (40HP, 30 Stamina, 4HP/S)  
+* Honey Glazed Deer Meat (45HP, 30 Stamina, 4HP/S)  
 * Honey Glazed Neck Tail (35HP, 25 Stamina, 4HP/S)  
 * Honey Glazed Lox Meat (60HP, 30 Stamina, 4HP/S)  
 * Honey Sweetened Sausages (60HP, 33 Stamina, 4HP/S)  
