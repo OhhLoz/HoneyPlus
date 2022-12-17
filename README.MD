@@ -9,40 +9,50 @@ Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPl
 ### Adds to the Cauldron:  
 
 #### Level 1 (No Upgrades)
+
 | Name  | HP | Stamina | Eitr | Regen | Duration
-|-||||||
+|---|---|---|---|---|---|
 |Honey Glazed Boar Meat|35|15|0|3|1200
 |Honey Glazed Deer Meat|40|17|0|3|1200
 |Honey Glazed Neck Tail|30|13|0|3|1200
 |Teriyaki Salmon|50|20|0|3|1200
+
 #### Level 2  
+
 | Name  | HP | Stamina | Eitr | Regen | Duration
-|-||||||
+|---|---|---|---|---|---|
 |Honey Sweetened Sausages|60|25|0|4|1500
 |Honey Glazed Serpent Meat|75|28|0|4|1500
 |Honey Mushroom Miso Soup|25|45|0|4|1500
+
 #### Level 3  
+
 | Name  | HP | Stamina | Eitr | Regen | Duration
-|-||||||
+|---|---|---|---|---|---|
 |Teriyaki Salmon Wrap|75|30|0|5|1500
 |Honey Glazed Wolf Meat|50|20|0|4|1200
 |Odin's Delight|30|40|0|4|1500
+
 #### Level 4  
+
 | Name  | HP | Stamina | Eitr | Regen | Duration
-|-||||||
+|---|---|---|---|---|---|
 |Honey Baked Bread|28|75|0|3|1500
 |Honey Glazed Lox Meat|55|20|0|5|1200
 |Lox Jerky|32|32|0|4|1800
+
 #### Level 5
+
 | Name  | HP | Stamina | Eitr | Regen | Duration
-|-||||||
+|---|---|---|---|---|---|
 |Honey Glazed Hare Meat|65|25|0|6|1200
 |Honey Glazed Seeker Meat|65|25|0|6|1200
 |Honey Magical Mushroom Stew|25|35|50|3|1500
   
 ### Adds to hand crafting:  
+
 | Name  | HP | Stamina | Eitr | Regen | Duration
-|-||||||
+|---|---|---|---|---|---|
 |Neck Jerky|15|15|0|2|1800
 |Deer Jerky|24|24|0|2|1800
   
