@@ -374,3 +374,5 @@ Environment.props
 # not the generated dll for thunderstore
 */Package/plugins/*
 HoneyPlus/HoneyPlus.csproj
+
+HoneyPlusUnity/valheim
