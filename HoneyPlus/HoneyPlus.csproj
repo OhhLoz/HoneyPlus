@@ -169,6 +169,8 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Package\README.md" />
+    <EmbeddedResource Include="translation_DE.json" />
+    <EmbeddedResource Include="translation_ES.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Package\plugins\" />
