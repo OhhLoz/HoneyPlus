@@ -17,12 +17,14 @@ namespace HoneyPlus
   {
     public const string PluginGUID = "OhhLoz-HoneyPlus";
     public const string PluginName = "HoneyPlus";
-    public const string PluginVersion = "3.0.8";
+    public const string PluginVersion = "3.1.0";
 
     private const string AssetBundleName = "honeyplusassets";
     private const string RecipeFileName = "recipes.json";
     private const string enTranslationFileName = "translation_EN.json";
     private const string cnTranslationFileName = "translation_CN.json";
+    private const string esTranslationFileName = "translation_ES.json";
+    private const string deTranslationFileName = "translation_DE.json";
 
     private static readonly string ModPath = Path.Combine(BepInEx.Paths.PluginPath, PluginGUID);
 
@@ -67,7 +69,13 @@ namespace HoneyPlus
         Localization.AddJsonFile("English", enTranslation);
 
         string cnTranslation = AssetUtils.LoadTextFromResources(cnTranslationFileName, ModAssembly);
-        Localization.AddJsonFile("Chinese", cnTranslation);
+        Localization.AddJsonFile("Chinese", cnTranslation);        
+            
+        string deTranslation = AssetUtils.LoadTextFromResources(deTranslationFileName, ModAssembly);
+        Localization.AddJsonFile("German", deTranslation);
+
+        string esTranslation = AssetUtils.LoadTextFromResources(esTranslationFileName, ModAssembly);
+        Localization.AddJsonFile("Spanish", deTranslation);
     }
   }
 }
