@@ -49,7 +49,7 @@ If manually installing on the thunderstore, the .zip needs to be extracted to a 
 |---|---|---|---|---|---|
 |Honey Glazed Hare Meat|65|25|0|6|1200
 |Honey Glazed Seeker Meat|65|25|0|6|1200
-|Honey Magical Mushroom Stew|25|35|50|3|1500
+|Dwarven Mushroom Stew|25|35|50|3|1500
   
 ### Adds to hand crafting:  
 
