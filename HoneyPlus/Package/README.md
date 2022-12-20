@@ -41,7 +41,7 @@ If manually installing on the thunderstore, the .zip needs to be extracted to a 
 |---|---|---|---|---|---|
 |Honey Baked Bread|28|75|0|3|1500
 |Honey Glazed Lox Meat|55|20|0|5|1200
-|Lox Jerky|32|32|0|4|1800
+|Lox Jerky|36|36|0|4|1800
 
 #### Level 5
 
@@ -55,7 +55,7 @@ If manually installing on the thunderstore, the .zip needs to be extracted to a 
 
 | Name  | HP | Stamina | Eitr | Regen | Duration
 |---|---|---|---|---|---|
-|Neck Jerky|15|15|0|2|1800
+|Neck Jerky|18|18|0|2|1800
 |Deer Jerky|24|24|0|2|1800
   
 ## License  
