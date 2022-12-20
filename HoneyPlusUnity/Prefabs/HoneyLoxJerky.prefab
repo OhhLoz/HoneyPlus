@@ -133,8 +133,8 @@ MonoBehaviour:
       m_equipStatusEffect: {fileID: 0}
       m_movementModifier: 0
       m_eitrRegenModifier: 0
-      m_food: 32
-      m_foodStamina: 32
+      m_food: 36
+      m_foodStamina: 36
       m_foodEitr: 0
       m_foodBurnTime: 1800
       m_foodRegen: 4
