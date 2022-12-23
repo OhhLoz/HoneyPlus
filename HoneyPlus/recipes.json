@@ -181,7 +181,7 @@
   {
     "Name": "$custom_item_honeycuredneck",
     "Item": "HoneyNeckJerky",
-    "Amount": 1,
+    "Amount": 2,
     "CraftingStation": null,
     "MinStationLevel": 1,
     "Enabled": true,
@@ -223,7 +223,7 @@
   {
     "Name": "$custom_item_honeycuredlox",
     "Item": "HoneyLoxJerky",
-    "Amount": 1,
+    "Amount": 2,
     "CraftingStation": "piece_cauldron",
     "MinStationLevel": 4,
     "Enabled": true,
@@ -235,14 +235,14 @@
       },
       {
         "Item": "Honey",
-        "Amount": 2
+        "Amount": 1
       }
     ]
   },
   {
     "Name": "$custom_item_honeycureddeer",
     "Item": "HoneyDeerJerky",
-    "Amount": 1,
+    "Amount": 2,
     "CraftingStation": null,
     "MinStationLevel": 1,
     "Enabled": true,
@@ -254,7 +254,7 @@
       },
       {
         "Item": "Honey",
-        "Amount": 2
+        "Amount": 1
       }
     ]
   },

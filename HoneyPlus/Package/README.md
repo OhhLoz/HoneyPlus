@@ -55,8 +55,12 @@ If manually installing on the thunderstore, the .zip needs to be extracted to a 
 
 | Name  | HP | Stamina | Eitr | Regen | Duration
 |---|---|---|---|---|---|
-|Neck Jerky|18|18|0|2|1800
-|Deer Jerky|24|24|0|2|1800
+|Neck jerky|18|18|0|2|1800
+|Deer jerky|24|24|0|2|1800
+
+### Moved to hand crafting from vanilla:
+* Boar jerky
+* Wolf jerky 
   
 ## License  
   
