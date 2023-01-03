@@ -167,6 +167,7 @@
     <EmbeddedResource Include="translation_EN.json" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="conversions.json" />
     <None Include="packages.config" />
     <None Include="Package\README.md" />
     <EmbeddedResource Include="translation_DE.json" />

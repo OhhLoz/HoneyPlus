@@ -1,4 +1,10 @@
 {      
+      "custom_piece_apiary" : "Bienenhaus",
+      "custom_piece_apiary_description" : "Der beste Freund des Imkers.",
+      "custom_piece_apiary_ext1" : "Bienenraucher",
+      "custom_piece_apiary_ext2" : "Werkzeugkasten für Imker",
+      "custom_piece_apiary_ext3" : "Abfülltisch",
+      "custom_piece_apiary_ext4" : "Galdr's Segen",
       "custom_item_honeybread": "Brot mit Honigglasur",
       "custom_item_honeybread_description": "Gebackenes Brot mit einer Honigschicht",
       "custom_item_honeycookedmeat": "Wildschweinfleisch in Honigmarinade",
@@ -34,5 +40,15 @@
       "custom_item_honeycookedseeker": "Sucher-Fleisch in Honigmarinade",
       "custom_item_honeycookedseeker_description": "Mariniertes Sucher-Fleisch in Honigmarinade.",
       "custom_item_honeymushroomstew": "Zwergpilzeintopf",
-      "custom_item_honeymushroomstew_description": "Ein Eintopf mit seltsamen Kräften von Galdr selbst."
+      "custom_item_honeymushroomstew_description": "Ein Eintopf mit seltsamen Kräften von Galdr selbst.",
+      "custom_item_honeyyellowstew": "Verstärkter gelber Eintopf",
+      "custom_item_honeyyellowstew_description": "Ein Eintopf von immenser Kraft.",
+      "custom_item_honeydessertpie_uncooked": "Ungekochter Karottenkuchen",
+      "custom_item_honeydessertpie_uncooked_description": "Bereit für den Ofen.",
+      "custom_item_honeydessertpie": "Karottenkuchen",
+      "custom_item_honeydessertpie_description": "Leckerer Kuchen, gesüßt mit Honig und Karotten.",
+      "custom_item_honeyharepie_uncooked": "Ungekochter Hasenkuchen",
+      "custom_item_honeyharepie_uncooked_description": "Bereit für den Ofen.",
+      "custom_item_honeyharepie": "Hasenkuchen",
+      "custom_item_honeyharepie_description": "Köstlicher Kuchen, durchdrungen von der Macht Galdrs."
 }
