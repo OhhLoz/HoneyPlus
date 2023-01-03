@@ -1,9 +1,9 @@
 ﻿using BepInEx;
+using BepInEx.Configuration;
 using Jotunn.Configs;
 using Jotunn.Entities;
 using Jotunn.Managers;
 using Jotunn.Utils;
-using System.IO;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
@@ -18,10 +18,11 @@ namespace HoneyPlus
   {
     public const string PluginGUID = "OhhLoz-HoneyPlus";
     public const string PluginName = "HoneyPlus";
-    public const string PluginVersion = "3.2.0";
+    public const string PluginVersion = "4.0.0";
 
     private const string AssetBundleName = "honeyplusassets";
     private const string RecipeFileName = "recipes.json";
+    private const string ConversionFileName = "conversions.json";
     private const string enTranslationFileName = "translation_EN.json";
     private const string cnTranslationFileName = "translation_CN.json";
     private const string esTranslationFileName = "translation_ES.json";
@@ -31,15 +32,22 @@ namespace HoneyPlus
     private Assembly ModAssembly;
     private AssetBundle HoneyPlusAssetBundle;
 
+    private ConfigEntry<bool> useOldRecipes;
+
     private void Awake()
     {
       ModAssembly = typeof(HoneyPlus).Assembly;
       HoneyPlusAssetBundle = AssetUtils.LoadAssetBundleFromResources(AssetBundleName, ModAssembly);
       Jotunn.Logger.LogInfo($"Loaded asset bundle: {HoneyPlusAssetBundle}");
+
       ItemManager.OnItemsRegistered += OnItemsRegistered;
-      //AddCustomPieces();
+      CreateConfigValues();
+      if(!useOldRecipes.Value)
+         AddCustomPieces();
       AddCustomItems();
+      AddItemConversions();
       AddLocalizations();
+
       HoneyPlusAssetBundle.Unload(false);
     }
 
@@ -52,8 +60,9 @@ namespace HoneyPlus
         {
             if (HoneyPlusAssetBundle.Contains(recipeConfig.Item))
             {
-                // if legacy config then recipeConfig.craftingstation = "piece_cauldron"
                 CustomItem customItem = new CustomItem(HoneyPlusAssetBundle.LoadAsset<GameObject>(recipeConfig.Item), true);
+                if (useOldRecipes.Value && recipeConfig.CraftingStation == "piece_apiary")
+                    recipeConfig.CraftingStation = "piece_cauldron";
                 ItemManager.Instance.AddItem(customItem);
                 ItemManager.Instance.AddRecipe(new CustomRecipe(recipeConfig));
                 Jotunn.Logger.LogInfo("Loaded Item: " + recipeConfig.Item);
@@ -61,37 +70,20 @@ namespace HoneyPlus
         }
     }
 
-    //private void AddCustomPieces()
-    //{
-    //        //PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle.LoadAsset<GameObject>("apiary"), "Hammer", fixReference: true));
-    //        //PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle.LoadAsset<GameObject>("apiary_ext1"), "Hammer", fixReference: true));
-    //        PieceConfig apiaryConfig = new PieceConfig();
-    //        apiaryConfig.Name = "$custom_piece_apiary";
-    //        apiaryConfig.Description = "$custom_piece_apiary_description";
-    //        apiaryConfig.CraftingStation = "piece_workbench";
-    //        apiaryConfig.Category = "Crafting";
-    //        apiaryConfig.PieceTable = "Hammer";
-    //        apiaryConfig.Icon = HoneyPlusAssetBundle.LoadAsset<Sprite>("apiary");
-    //        apiaryConfig.AddRequirement(new RequirementConfig("QueenBee", 1, 0, true));
-    //        apiaryConfig.AddRequirement(new RequirementConfig("Wood", 15, 0, true));
-    //        apiaryConfig.AddRequirement(new RequirementConfig("Honey", 6, 0, true));
+    private void AddCustomPieces()
+    {
+        PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle.LoadAsset<GameObject>("piece_apiary"), "Hammer", fixReference: true));
+        Jotunn.Logger.LogInfo("Loaded Piece: Apiary");
+        PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle.LoadAsset<GameObject>("apiary_ext1"), "Hammer", fixReference: true));
+        Jotunn.Logger.LogInfo("Loaded Piece: Bee Smoker");
+        PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle.LoadAsset<GameObject>("apiary_ext2"), "Hammer", fixReference: true));
+        Jotunn.Logger.LogInfo("Loaded Piece: Beekeepers Toolbox");
+        PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle.LoadAsset<GameObject>("apiary_ext3"), "Hammer", fixReference: true));
+        Jotunn.Logger.LogInfo("Loaded Piece: Bottling Table");
+        PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle.LoadAsset<GameObject>("apiary_ext4"), "Hammer", fixReference: true));
+        Jotunn.Logger.LogInfo("Loaded Piece: Galdr's Blessing");
+    }
 
-    //        PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle, "apiary", fixReference: true, apiaryConfig));
-
-    //        PieceConfig apiaryExt1Config = new PieceConfig();
-    //        apiaryExt1Config.Name = "$custom_piece_apiary_ext1";
-    //        apiaryExt1Config.Description = "$custom_piece_apiary $item_upgrade";
-    //        apiaryExt1Config.CraftingStation = "piece_workbench";
-    //        apiaryExt1Config.Category = "Crafting";
-    //        apiaryExt1Config.PieceTable = "Hammer";
-    //        apiaryExt1Config.Icon = HoneyPlusAssetBundle.LoadAsset<Sprite>("apiary_ext1");
-    //        apiaryExt1Config.ExtendStation = "$custom_piece_apiary";
-    //        apiaryExt1Config.AddRequirement(new RequirementConfig("Copper", 5, 0, true));
-    //        apiaryExt1Config.AddRequirement(new RequirementConfig("Coal", 5, 0, true));
-    //        apiaryExt1Config.AddRequirement(new RequirementConfig("LeatherScraps", 5, 0, true));
-
-    //        PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle, "apiary_ext1", fixReference: true, apiaryExt1Config));
-    //}
     private void OnItemsRegistered()
     {
         try
@@ -124,6 +116,7 @@ namespace HoneyPlus
             }
         }
     }
+    
     private void AddLocalizations()
     {
         Localization = new CustomLocalization();
@@ -140,6 +133,26 @@ namespace HoneyPlus
 
         string esTranslation = AssetUtils.LoadTextFromResources(esTranslationFileName, ModAssembly);
         Localization.AddJsonFile("Spanish", esTranslation);
+    }
+
+    private void AddItemConversions()
+    {
+        List<CookingConversionConfig> conversionConfigs = CookingConversionConfig.ListFromJson(AssetUtils.LoadTextFromResources(ConversionFileName, ModAssembly));
+        ItemManager.Instance.AddItem(new CustomItem(HoneyPlusAssetBundle.LoadAsset<GameObject>("HoneyDessertPie"), true));
+        ItemManager.Instance.AddItem(new CustomItem(HoneyPlusAssetBundle.LoadAsset<GameObject>("HoneyHarePie"), true));
+
+        foreach (CookingConversionConfig config in conversionConfigs)
+            ItemManager.Instance.AddItemConversion(new CustomItemConversion(config));
+    }
+
+    private void CreateConfigValues()
+    {
+        Config.SaveOnConfigSet = true;
+
+        useOldRecipes = Config.Bind("Client config", "Use legacy recipes", false,
+            new ConfigDescription("Set to true to add all recipes to the cauldron instead of the custom crafting station", 
+            new AcceptableValueRange<bool>(false, true),
+            new ConfigurationManagerAttributes { IsAdminOnly = true }));
     }
   }
 }

@@ -1,0 +1,14 @@
+[
+	{
+		"Station" : "piece_oven",
+		"FromItem" : "HoneyDessertPieUncooked",
+		"ToItem" : "HoneyDessertPie",
+		"CookTime" : 50
+	},
+	{
+		"Station" : "piece_oven",
+		"FromItem" : "HoneyHarePieUncooked",
+		"ToItem" : "HoneyHarePie",
+		"CookTime" : 50
+	}
+]

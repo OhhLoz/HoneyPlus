@@ -1,4 +1,10 @@
 {      
+      "custom_piece_apiary" : "Colmenar",
+      "custom_piece_apiary_description" : "Un mejor amigo de los apicultores.",
+      "custom_piece_apiary_ext1" : "Fumador de abejas",
+      "custom_piece_apiary_ext2" : "Caja de herramientas de los apicultores",
+      "custom_piece_apiary_ext3" : "Mesa de embotellado",
+      "custom_piece_apiary_ext4" : "Bendición de Galdr",
       "custom_item_honeybread": "Pan a la miel",
       "custom_item_honeybread_description": "Pan horneado con miel.",
       "custom_item_honeycookedmeat": "Carne a la miel",
@@ -34,5 +40,15 @@
       "custom_item_honeycookedseeker": "Carne de buscador glaseada con miel",
       "custom_item_honeycookedseeker_description": "Carne de buscador marinada y cocinada con miel.",
       "custom_item_honeymushroomstew": "Estofado de champiñones enanos",
-      "custom_item_honeymushroomstew_description": "Un guiso imbuido de extraños poderes del propio Galdr."
+      "custom_item_honeymushroomstew_description": "Un guiso imbuido de extraños poderes del propio Galdr.",
+      "custom_item_honeyyellowstew": "Guiso Amarillo Fortificado",
+      "custom_item_honeyyellowstew_description": "Un guiso de inmenso poder.",
+      "custom_item_honeydessertpie_uncooked": "Pastel de zanahoria crudo",
+      "custom_item_honeydessertpie_uncooked_description": "Listo para el horno.",
+      "custom_item_honeydessertpie": "Pastel de zanahoria",
+      "custom_item_honeydessertpie_description": "Sabroso pastel endulzado con miel y zanahorias.",
+      "custom_item_honeyharepie_uncooked": "Pastel de liebre crudo",
+      "custom_item_honeyharepie_uncooked_description": "Listo para el horno.",
+      "custom_item_honeyharepie": "Pastel de liebre",
+      "custom_item_honeyharepie_description": "Delicioso pastel imbuido del poder de Galdr."
 }

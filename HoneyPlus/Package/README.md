@@ -8,15 +8,23 @@ Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPl
 If manually installing on the thunderstore, the .zip needs to be extracted to a folder named "OhhLoz-HoneyPlus"
   
 ## Additions
-### Adds to the Cauldron:  
+
+### Adds Custom Pieces/Placeables with the Hammer (OPTIONAL - Check Configuration below):
+* Apiary (Custom Crafting Table)
+* Bee Smoker (Apiary Extension)
+* Beekeepers Toolbox (Apiary Extension) 
+* Bottling Table (Apiary Extension)
+* Galdr's Blessing (Apiary Extension)
+
+### Adds to the Apiary/Cauldron:  
 
 #### Level 1 (No Upgrades)
 
 | Name  | HP | Stamina | Eitr | Regen | Duration
 |---|---|---|---|---|---|
-|Honey Glazed Boar Meat|35|15|0|3|1200
-|Honey Glazed Deer Meat|40|17|0|3|1200
-|Honey Glazed Neck Tail|30|13|0|3|1200
+|Pork Tenderloin|35|15|0|3|1200
+|Venison Loin|40|17|0|3|1200
+|Honey Brushed Neck Tail|30|13|0|3|1200
 |Teriyaki Salmon|50|20|0|3|1200
 
 #### Level 2  
@@ -24,32 +32,35 @@ If manually installing on the thunderstore, the .zip needs to be extracted to a 
 | Name  | HP | Stamina | Eitr | Regen | Duration
 |---|---|---|---|---|---|
 |Honey Sweetened Sausages|60|25|0|4|1500
-|Honey Glazed Serpent Meat|75|28|0|4|1500
-|Honey Mushroom Miso Soup|25|45|0|4|1500
+|Teriyaki Serpent|75|28|0|4|1500
+|Mushroom Miso Soup|25|45|0|4|1500
 
 #### Level 3  
 
 | Name  | HP | Stamina | Eitr | Regen | Duration
 |---|---|---|---|---|---|
 |Teriyaki Salmon Wrap|75|30|0|5|1500
-|Honey Glazed Wolf Meat|50|20|0|4|1200
+|Marinated Wolf Meat|50|20|0|4|1200
 |Odin's Delight|30|40|0|4|1500
 
 #### Level 4  
 
 | Name  | HP | Stamina | Eitr | Regen | Duration
 |---|---|---|---|---|---|
-|Honey Baked Bread|28|75|0|3|1500
-|Honey Glazed Lox Meat|55|20|0|5|1200
-|Lox Jerky|36|36|0|4|1800
+|Honey Bread|28|75|0|3|1500
+|Barbecued Lox|55|20|0|5|1200
+|Dessert Pie|28|80|0|4|1800
+|Tar|N/A|N/A|N/A|N/A|N/A
 
 #### Level 5
 
 | Name  | HP | Stamina | Eitr | Regen | Duration
 |---|---|---|---|---|---|
-|Honey Glazed Hare Meat|65|25|0|6|1200
+|Honey Roast Hare|65|25|0|6|1200
 |Honey Glazed Seeker Meat|65|25|0|6|1200
 |Dwarven Mushroom Stew|25|35|50|3|1500
+|Fortified Yellow Stew|26|85|0|4|1500
+|Hare Pie|60|14|50|6|1800
   
 ### Adds to hand crafting:  
 
@@ -57,10 +68,15 @@ If manually installing on the thunderstore, the .zip needs to be extracted to a 
 |---|---|---|---|---|---|
 |Neck jerky|18|18|0|2|1800
 |Deer jerky|24|24|0|2|1800
+|Lox jerky|36|36|0|4|1800
 
 ### Moved to hand crafting from vanilla:
 * Boar jerky
 * Wolf jerky 
+
+## Configuration
+  
+On first launch a config will be generated in BepInEx/config, at the moment the only option is to disable the addition of custom crafting table (Apiary) and its upgrades, this option is off by default.  
   
 ## License  
   
