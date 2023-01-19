@@ -202,6 +202,29 @@
     ]
   },
   {
+    "Name": "$custom_item_honeyyellowstew_lesser",
+    "Item": "HoneyYellowStewLesser",
+    "Amount": 1,
+    "CraftingStation": "piece_apiary",
+    "MinStationLevel": 3,
+    "Enabled": true,
+    "Requirements": 
+    [
+      {
+        "Item": "Honey",
+        "Amount": 3
+      },
+      {
+        "Item": "Cloudberry",
+        "Amount": 3
+      },
+      {
+        "Item": "Onion",
+        "Amount": 3
+      }
+    ]
+  },
+  {
     "Name": "$custom_item_honeybread",
     "Item": "HoneyBread",
     "Amount": 1,
@@ -282,10 +305,33 @@
       {
         "Item": "Resin",
         "Amount": 1
-      }
+      },
       {
         "Item": "Cloudberry",
         "Amount": 1
+      }
+    ]
+  },
+  {
+    "Name": "$custom_item_meadbase_speed",
+    "Item": "HoneyMeadBaseSpeed",
+    "Amount": 1,
+    "CraftingStation": "piece_apiary",
+    "MinStationLevel": 4,
+    "Enabled": true,
+    "Requirements": 
+    [
+      {
+        "Item": "Honey",
+        "Amount": 9
+      },
+      {
+        "Item": "Cloudberry",
+        "Amount": 9
+      },
+      {
+        "Item": "Barley",
+        "Amount": 6
       }
     ]
   },
@@ -405,6 +451,52 @@
     ]
   },
   {
+    "Name": "$custom_item_meadbase_damage",
+    "Item": "HoneyMeadBaseDamage",
+    "Amount": 1,
+    "CraftingStation": "piece_apiary",
+    "MinStationLevel": 5,
+    "Enabled": true,
+    "Requirements": 
+    [
+      {
+        "Item": "Honey",
+        "Amount": 9
+      },
+      {
+        "Item": "MushroomMagecap",
+        "Amount": 9
+      },
+      {
+        "Item": "Sap",
+        "Amount": 6
+      }
+    ]
+  },
+  {
+    "Name": "$item_royaljelly",
+    "Item": "RoyalJelly",
+    "Amount": 2,
+    "CraftingStation": "piece_apiary",
+    "MinStationLevel": 5,
+    "Enabled": true,
+    "Requirements": 
+    [
+      {
+        "Item": "Honey",
+        "Amount": 1
+      },
+      {
+        "Item": "Sap",
+        "Amount": 1
+      },
+      {
+        "Item": "MushroomJotunPuffs",
+        "Amount": 1
+      }
+    ]
+  },
+  {
     "Name": "$custom_item_honeycuredneck",
     "Item": "HoneyNeckJerky",
     "Amount": 2,
@@ -460,5 +552,25 @@
         "Amount": 1
       }
     ]
+  },
+  {
+    "Name" : null,
+    "Item" : "HoneyCooked"
+  },
+  {
+    "Name" : null,
+    "Item" : "HoneyDessertPie"
+  },
+  {
+    "Name" : null,  
+    "Item" : "HoneyHarePie"
+  },
+  {
+    "Name" : null,
+    "Item" : "HoneyMeadSpeed"
+  },
+  {
+    "Name" : null,
+    "Item" : "HoneyMeadDamage"
   }
 ]

@@ -74,7 +74,7 @@ MonoBehaviour:
   m_noClipping: 1
   m_onlyInTeleportArea: 0
   m_allowedInDungeons: 0
-  m_spaceRequirement: 2
+  m_spaceRequirement: 1
   m_repairPiece: 0
   m_canBeRemoved: 1
   m_allowRotatedOverlap: 0

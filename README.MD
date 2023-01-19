@@ -5,9 +5,11 @@ MUST be installed on both the client and the server
   
 Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPlus/releases) page by extracting the contents of the .zip inside the BepInEx/Plugins folder, on the [nexus](https://www.nexusmods.com/valheim/mods/2063) or on the [thunderstore](https://valheim.thunderstore.io/package/OhhLoz/HoneyPlus/)(recommended).  
   
+If manually installing on the thunderstore, the .zip needs to be extracted to a folder named "OhhLoz-HoneyPlus" 
+  
 ## Additions
 
-### Adds Custom Pieces/Placeables with the Hammer (OPTIONAL - Check Configuration below):
+### Adds Custom Pieces/Placeables with the Hammer*:
 * Apiary (Custom Crafting Table)
 * Bee Smoker (Apiary Extension)
 * Beekeepers Toolbox (Apiary Extension) 
@@ -40,6 +42,7 @@ Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPl
 |Teriyaki Salmon Wrap|75|30|0|5|1500
 |Marinated Wolf Meat|50|20|0|4|1200
 |Odin's Delight|30|40|0|4|1500
+|Lesser Yellow Stew|18|70|0|2|1500
 
 #### Level 4  
 
@@ -47,8 +50,9 @@ Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPl
 |---|---|---|---|---|---|
 |Honey Bread|28|75|0|3|1500
 |Barbecued Lox|55|20|0|5|1200
-|Dessert Pie|28|80|0|4|1800
-|Tar|N/A|N/A|N/A|N/A|N/A
+|Carrot Cake|28|80|0|4|1800
+|Tar*|N/A|N/A|N/A|N/A|N/A
+|Mead base: Energy*|N/A|N/A|N/A|N/A|N/A
 
 #### Level 5
 
@@ -59,6 +63,8 @@ Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPl
 |Dwarven Mushroom Stew|25|35|50|3|1500
 |Fortified Yellow Stew|26|85|0|4|1500
 |Hare Pie|60|14|50|6|1800
+|Mead base: Aesir*|N/A|N/A|N/A|N/A|N/A
+|Royal Jelly*|15|15|0|1|900
   
 ### Adds to hand crafting:  
 
@@ -72,10 +78,22 @@ Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPl
 * Boar jerky
 * Wolf jerky 
 
+### Adds to the cooking station: 
+* Cooked Honeycomb (Uses 1x Honey)  
+  
 ## Configuration
   
-On first launch a config will be generated in BepInEx/config, at the moment the only option is to disable the addition of custom crafting table (Apiary) and its upgrades, this option is off by default.  
+All things marked with an asterisk above can be disabled.  
+On first launch a config will be generated in BepInEx/config. Apiary (& upgrades), Vanilla recipe additions (& changes) & Meads can be disabled
+This config is synced with the server, so must have the same value.  
 
+## Suggestions / Bug Reporting / Changelog
+  
+Ideally, all suggestions & bug reports should be on the [GitHub issues](https://github.com/OhhLoz/HoneyPlus/issues) page. 
+I'm open to suggestions, whether that would be for rebalancing, new items, new mechanics.  
+
+[Changelog / Past Releases](https://github.com/OhhLoz/HoneyPlus/releases)
+  
 ## License  
   
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](https://github.com/OhhLoz/HoneyPlus/blob/master/LICENSE) file for details  
@@ -89,3 +107,4 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 * [CSOLYOO](https://github.com/CSOLYOO) - For the Chinese translations  
 * [Amnu42](https://www.nexusmods.com/valheim/users/58442931) - For the German translations  
 * [conanchoas](https://www.nexusmods.com/valheim/users/17911054) - For the Spanish translations  
+* [KillFace212](https://github.com/Killface212) - For various food suggestions

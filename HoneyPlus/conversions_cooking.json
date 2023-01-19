@@ -10,5 +10,11 @@
 		"FromItem" : "HoneyHarePieUncooked",
 		"ToItem" : "HoneyHarePie",
 		"CookTime" : 50
+	},
+	{
+		"Station" : "piece_cookingstation",
+		"FromItem" : "Honey",
+		"ToItem" : "HoneyCooked",
+		"CookTime" : 25
 	}
 ]
