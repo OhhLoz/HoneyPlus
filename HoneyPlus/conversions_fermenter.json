@@ -1,0 +1,12 @@
+[
+	{
+		"FromItem" : "HoneyMeadBaseSpeed",
+		"ToItem" : "HoneyMeadSpeed",
+		"ProducedItems" : 3
+	},
+	{
+		"FromItem" : "HoneyMeadBaseDamage",
+		"ToItem" : "HoneyMeadDamage",
+		"ProducedItems" : 3
+	}
+]

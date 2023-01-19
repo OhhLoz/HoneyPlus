@@ -167,11 +167,13 @@
     <EmbeddedResource Include="translation_EN.json" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="conversions.json" />
+    <EmbeddedResource Include="conversions_cooking.json" />
+    <EmbeddedResource Include="conversions_fermenter.json" />
     <None Include="packages.config" />
     <None Include="Package\README.md" />
     <EmbeddedResource Include="translation_DE.json" />
     <EmbeddedResource Include="translation_ES.json" />
+    <EmbeddedResource Include="pieces.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Package\plugins\" />
@@ -191,6 +193,10 @@
       $(BuildDependsOn);
       JotunnPostBuildTaskWin
     </BuildDependsOn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>echo "Copying AssetBundle from Unity Project"
+copy H:\Documents\Apps\HoneyPlus\HoneyPlusUnity\valheim\Current\Assets\AssetBundles\honeyplusassets $ProjectDir</PreBuildEvent>
   </PropertyGroup>
   <Target Name="EnsureEnvironmentPropsImport" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
