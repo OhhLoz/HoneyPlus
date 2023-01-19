@@ -18,11 +18,14 @@ namespace HoneyPlus
   {
     public const string PluginGUID = "OhhLoz-HoneyPlus";
     public const string PluginName = "HoneyPlus";
-    public const string PluginVersion = "4.0.1";
+    public const string PluginVersion = "5.0.0";
 
+    // FILES
     private const string AssetBundleName = "honeyplusassets";
     private const string RecipeFileName = "recipes.json";
-    private const string ConversionFileName = "conversions.json";
+    private const string PieceFileName = "pieces.json";
+    private const string cookingConversionFileName = "conversions_cooking.json";
+    private const string fermenterConversionFileName = "conversions_fermenter.json";
     private const string enTranslationFileName = "translation_EN.json";
     private const string cnTranslationFileName = "translation_CN.json";
     private const string esTranslationFileName = "translation_ES.json";
@@ -33,6 +36,9 @@ namespace HoneyPlus
     private AssetBundle HoneyPlusAssetBundle;
 
     private ConfigEntry<bool> useOldRecipes;
+    private ConfigEntry<bool> useMeadRecipes;
+    private ConfigEntry<bool> useVanillaRecipeChanges;
+    private ConfigEntry<bool> useVanillaRecipeAdditions;
 
     private void Awake()
     {
@@ -40,10 +46,13 @@ namespace HoneyPlus
       HoneyPlusAssetBundle = AssetUtils.LoadAssetBundleFromResources(AssetBundleName, ModAssembly);
       Jotunn.Logger.LogInfo($"Loaded asset bundle: {HoneyPlusAssetBundle}");
 
-      ItemManager.OnItemsRegistered += OnItemsRegistered;
       CreateConfigValues();
+
+      ItemManager.OnItemsRegistered += OnItemsRegistered;
+
       if(!useOldRecipes.Value)
          AddCustomPieces();
+
       AddCustomItems();
       AddItemConversions();
       AddLocalizations();
@@ -58,37 +67,51 @@ namespace HoneyPlus
 
         foreach (RecipeConfig recipeConfig in recipeConfigs)
         {
-            if (HoneyPlusAssetBundle.Contains(recipeConfig.Item))
+            // If user opts to disable vanilla recipe additions
+            if (!useVanillaRecipeAdditions.Value && ((recipeConfig.Item == "Tar") || (recipeConfig.Item == "RoyalJelly")))
+                continue;
+
+            // If user opts to disable mead recipes
+            if (!useMeadRecipes.Value && recipeConfig.Item.Contains("Mead"))
+                continue;
+
+            if (recipeConfig.Name != null)
             {
-                CustomItem customItem = new CustomItem(HoneyPlusAssetBundle.LoadAsset<GameObject>(recipeConfig.Item), true);
                 if (useOldRecipes.Value && recipeConfig.CraftingStation == "piece_apiary")
                     recipeConfig.CraftingStation = "piece_cauldron";
-                ItemManager.Instance.AddItem(customItem);
                 ItemManager.Instance.AddRecipe(new CustomRecipe(recipeConfig));
-                Jotunn.Logger.LogInfo("Loaded Item: " + recipeConfig.Item);
             }
+
+            // Stops Tar/Royal Jelly being added as an item, only as a recipe above
+            if ((recipeConfig.Item == "Tar") || (recipeConfig.Item == "RoyalJelly"))
+                continue;
+            CustomItem customItem = new CustomItem(HoneyPlusAssetBundle.LoadAsset<GameObject>(recipeConfig.Item), true);
+            ItemManager.Instance.AddItem(customItem);
+            Jotunn.Logger.LogInfo("Loaded Item: " + recipeConfig.Item);
         }
     }
 
     private void AddCustomPieces()
     {
-        PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle.LoadAsset<GameObject>("piece_apiary"), "Hammer", fixReference: true));
-        Jotunn.Logger.LogInfo("Loaded Piece: Apiary");
-        PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle.LoadAsset<GameObject>("apiary_ext1"), "Hammer", fixReference: true));
-        Jotunn.Logger.LogInfo("Loaded Piece: Bee Smoker");
-        PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle.LoadAsset<GameObject>("apiary_ext2"), "Hammer", fixReference: true));
-        Jotunn.Logger.LogInfo("Loaded Piece: Beekeepers Toolbox");
-        PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle.LoadAsset<GameObject>("apiary_ext3"), "Hammer", fixReference: true));
-        Jotunn.Logger.LogInfo("Loaded Piece: Bottling Table");
-        PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle.LoadAsset<GameObject>("apiary_ext4"), "Hammer", fixReference: true));
-        Jotunn.Logger.LogInfo("Loaded Piece: Galdr's Blessing");
+        List<PieceConfig> pieceConfigs = PieceConfig.ListFromJson(AssetUtils.LoadTextFromResources(PieceFileName, ModAssembly));
+
+        foreach (PieceConfig config in pieceConfigs)
+        {
+            if (HoneyPlusAssetBundle.Contains(config.Name))
+            {
+                PieceManager.Instance.AddPiece(new CustomPiece(HoneyPlusAssetBundle.LoadAsset<GameObject>(config.Name), "Hammer", fixReference: true));
+                Jotunn.Logger.LogInfo("Loaded Piece: " + config.Name);
+            }
+        }
     }
 
     private void OnItemsRegistered()
     {
         try
         {
-            ChangeRecipes();
+            if (useVanillaRecipeChanges.Value)
+                ChangeRecipes();
+            ChangeItems();
         }
         catch (Exception e)
         {
@@ -116,7 +139,15 @@ namespace HoneyPlus
             }
         }
     }
-    
+
+    private void ChangeItems()
+    {
+        GameObject honeyObj = ObjectDB.instance.m_items.Find(x => x.name == "Honey");
+        GameObject model = Instantiate(honeyObj.transform.GetChild(0).gameObject);
+        model.name = "attach";
+        model.transform.SetParent(honeyObj.transform);
+    }
+
     private void AddLocalizations()
     {
         Localization = new CustomLocalization();
@@ -137,20 +168,43 @@ namespace HoneyPlus
 
     private void AddItemConversions()
     {
-        List<CookingConversionConfig> conversionConfigs = CookingConversionConfig.ListFromJson(AssetUtils.LoadTextFromResources(ConversionFileName, ModAssembly));
-        ItemManager.Instance.AddItem(new CustomItem(HoneyPlusAssetBundle.LoadAsset<GameObject>("HoneyDessertPie"), true));
-        ItemManager.Instance.AddItem(new CustomItem(HoneyPlusAssetBundle.LoadAsset<GameObject>("HoneyHarePie"), true));
+        // Carrot Cake, Hare Pie & Cooked Honeycomb
+        List<CookingConversionConfig> cookingConfigs = CookingConversionConfig.ListFromJson(AssetUtils.LoadTextFromResources(cookingConversionFileName, ModAssembly));
 
-        foreach (CookingConversionConfig config in conversionConfigs)
+        foreach (CookingConversionConfig config in cookingConfigs)
             ItemManager.Instance.AddItemConversion(new CustomItemConversion(config));
+
+        if(useMeadRecipes.Value)
+        {
+            // Meads
+            List<FermenterConversionConfig> fermenterConfigs = FermenterConversionConfig.ListFromJson(AssetUtils.LoadTextFromResources(fermenterConversionFileName, ModAssembly));
+
+            foreach (FermenterConversionConfig config in fermenterConfigs)
+                ItemManager.Instance.AddItemConversion(new CustomItemConversion(config));
+        }
     }
 
     private void CreateConfigValues()
     {
         Config.SaveOnConfigSet = true;
 
-        useOldRecipes = Config.Bind("Client config", "Use legacy recipes", false,
-            new ConfigDescription("Set to true to add all recipes to the cauldron instead of the custom crafting station", 
+        useOldRecipes = Config.Bind("Main", "Use legacy recipes", false,
+            new ConfigDescription("Set to true to add all recipes to the cauldron instead of the custom crafting station (apiary)", 
+            new AcceptableValueRange<bool>(false, true),
+            new ConfigurationManagerAttributes { IsAdminOnly = true }));
+
+        useVanillaRecipeAdditions = Config.Bind("Tweaks", "Add vanilla recipes", true,
+            new ConfigDescription("Set to false to disable addition of vanilla recipes (Tar & Royal Jelly) to apiary/cauldron",
+            new AcceptableValueRange<bool>(false, true),
+            new ConfigurationManagerAttributes { IsAdminOnly = true }));
+
+        useVanillaRecipeAdditions = Config.Bind("Tweaks", "Change vanilla recipes", true,
+            new ConfigDescription("Set to false to disable changing of vanilla recipes (Wolf & Boar Jerky) to hand crafting",
+            new AcceptableValueRange<bool>(false, true),
+            new ConfigurationManagerAttributes { IsAdminOnly = true }));
+
+        useMeadRecipes = Config.Bind("Tweaks", "Use mead recipes", true,
+            new ConfigDescription("Set to false to disable addition of new meads (Speed & Damage) to the apiary/cauldron",
             new AcceptableValueRange<bool>(false, true),
             new ConfigurationManagerAttributes { IsAdminOnly = true }));
     }
