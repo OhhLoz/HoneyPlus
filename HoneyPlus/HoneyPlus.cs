@@ -18,7 +18,7 @@ namespace HoneyPlus
   {
     public const string PluginGUID = "OhhLoz-HoneyPlus";
     public const string PluginName = "HoneyPlus";
-    public const string PluginVersion = "5.0.0";
+    public const string PluginVersion = "5.1.0";
 
     // FILES
     private const string AssetBundleName = "honeyplusassets";
@@ -30,6 +30,7 @@ namespace HoneyPlus
     private const string cnTranslationFileName = "translation_CN.json";
     private const string esTranslationFileName = "translation_ES.json";
     private const string deTranslationFileName = "translation_DE.json";
+    private const string ptbrTranslationFileName = "translation_PT-BR.json";
 
     private CustomLocalization Localization;
     private Assembly ModAssembly;
@@ -39,6 +40,8 @@ namespace HoneyPlus
     private ConfigEntry<bool> useMeadRecipes;
     private ConfigEntry<bool> useVanillaRecipeChanges;
     private ConfigEntry<bool> useVanillaRecipeAdditions;
+
+    private GameObject HoneyAttach;
 
     private void Awake()
     {
@@ -52,6 +55,8 @@ namespace HoneyPlus
 
       if(!useOldRecipes.Value)
          AddCustomPieces();
+
+      HoneyAttach = HoneyPlusAssetBundle.LoadAsset<GameObject>("HoneyAttach");
 
       AddCustomItems();
       AddItemConversions();
@@ -143,9 +148,9 @@ namespace HoneyPlus
     private void ChangeItems()
     {
         GameObject honeyObj = ObjectDB.instance.m_items.Find(x => x.name == "Honey");
-        GameObject model = Instantiate(honeyObj.transform.GetChild(0).gameObject);
-        model.name = "attach";
-        model.transform.SetParent(honeyObj.transform);
+        HoneyAttach.name = "attach";
+        HoneyAttach.transform.SetParent(honeyObj.transform);
+        Jotunn.Logger.LogInfo("Changed Item: Honey");
     }
 
     private void AddLocalizations()
@@ -164,6 +169,9 @@ namespace HoneyPlus
 
         string esTranslation = AssetUtils.LoadTextFromResources(esTranslationFileName, ModAssembly);
         Localization.AddJsonFile("Spanish", esTranslation);
+
+        string ptbrTranslation = AssetUtils.LoadTextFromResources(ptbrTranslationFileName, ModAssembly);
+        Localization.AddJsonFile("Portuguese_Brazilian", ptbrTranslation);
     }
 
     private void AddItemConversions()
@@ -198,7 +206,7 @@ namespace HoneyPlus
             new AcceptableValueRange<bool>(false, true),
             new ConfigurationManagerAttributes { IsAdminOnly = true }));
 
-        useVanillaRecipeAdditions = Config.Bind("Tweaks", "Change vanilla recipes", true,
+        useVanillaRecipeChanges = Config.Bind("Tweaks", "Change vanilla recipes", true,
             new ConfigDescription("Set to false to disable changing of vanilla recipes (Wolf & Boar Jerky) to hand crafting",
             new AcceptableValueRange<bool>(false, true),
             new ConfigurationManagerAttributes { IsAdminOnly = true }));
