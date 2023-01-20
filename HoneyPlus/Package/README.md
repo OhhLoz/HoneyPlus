@@ -84,7 +84,7 @@ If manually installing on the thunderstore, the .zip needs to be extracted to a 
 ## Configuration
   
 All things marked with an asterisk above can be disabled.  
-On first launch a config will be generated in BepInEx/config. Apiary (& upgrades), Vanilla recipe additions (& changes) & Meads can be disabled
+On first launch a config will be generated in BepInEx/config. Apiary (& upgrades), Vanilla recipe additions (& changes) & Meads can be disabled.  
 This config is synced with the server, so must have the same value.  
 
 ## Suggestions / Bug Reporting / Changelog
@@ -107,4 +107,5 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 * [CSOLYOO](https://github.com/CSOLYOO) - For the Chinese translations  
 * [Amnu42](https://www.nexusmods.com/valheim/users/58442931) - For the German translations  
 * [conanchoas](https://www.nexusmods.com/valheim/users/17911054) - For the Spanish translations  
+* [kaiqueknup](https://www.nexusmods.com/valheim/users/37243480) - For the Brazilian Portuguese translations  
 * [KillFace212](https://github.com/Killface212) - For various food suggestions

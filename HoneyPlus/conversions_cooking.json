@@ -16,5 +16,11 @@
 		"FromItem" : "Honey",
 		"ToItem" : "HoneyCooked",
 		"CookTime" : 25
+	},
+	{
+		"Station" : "piece_cookingstation_iron",
+		"FromItem" : "Honey",
+		"ToItem" : "HoneyCooked",
+		"CookTime" : 25
 	}
 ]
