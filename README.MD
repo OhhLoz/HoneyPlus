@@ -5,8 +5,6 @@ MUST be installed on both the client and the server
   
 Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPlus/releases) page by extracting the contents of the .zip inside the BepInEx/Plugins folder, on the [nexus](https://www.nexusmods.com/valheim/mods/2063) or on the [thunderstore](https://valheim.thunderstore.io/package/OhhLoz/HoneyPlus/)(recommended).  
   
-If manually installing on the thunderstore, the .zip needs to be extracted to a folder named "OhhLoz-HoneyPlus" 
-  
 ## Additions
 
 ### Adds Custom Pieces/Placeables with the Hammer*:
@@ -84,8 +82,9 @@ If manually installing on the thunderstore, the .zip needs to be extracted to a 
 ## Configuration
   
 All things marked with an asterisk above can be disabled.  
-On first launch a config will be generated in BepInEx/config. Apiary (& upgrades), Vanilla recipe additions (& changes) & Meads can be disabled.  
-This config is synced with the server, so must have the same value.  
+On first launch a config will be generated in BepInEx/config.  
+Apiary, Vanilla Recipe Additions, Vanilla Recipe Changes & Meads can be disabled.  
+This config is synced with the server, so must have the same values.  
 
 ## Suggestions / Bug Reporting / Changelog
   
