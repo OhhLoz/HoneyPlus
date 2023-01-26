@@ -106,5 +106,5 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 * [CSOLYOO](https://github.com/CSOLYOO) - For the Chinese translations  
 * [Amnu42](https://www.nexusmods.com/valheim/users/58442931) - For the German translations  
 * [conanchoas](https://www.nexusmods.com/valheim/users/17911054) - For the Spanish translations  
-* [kaiqueknup](https://www.nexusmods.com/valheim/users/37243480) - For the Brazilian Portuguese translations  
+* [kaiqueknup](https://www.nexusmods.com/valheim/users/37243480) & Andre - For the Brazilian Portuguese translations  
 * [KillFace212](https://github.com/Killface212) - For various food suggestions
