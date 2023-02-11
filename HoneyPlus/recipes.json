@@ -95,6 +95,25 @@
     ]
   },
   {
+    "Name": "$custom_item_honeysausages4",
+    "Item": "HoneySausages",
+    "Amount": 4,
+    "CraftingStation": "piece_apiary",
+    "MinStationLevel": 2,
+    "Enabled": true,
+    "Requirements": 
+    [
+      {
+        "Item": "Sausages",
+        "Amount": 4
+      },
+      {
+        "Item": "Honey",
+        "Amount": 16
+      }
+    ]
+  },
+  {
     "Name": "$custom_item_honeyserpentmeat",
     "Item": "HoneySerpentMeat",
     "Amount": 1,
@@ -313,6 +332,29 @@
     ]
   },
   {
+    "Name": "$item_tar10",
+    "Item": "Tar",
+    "Amount": 10,
+    "CraftingStation": "piece_apiary",
+    "MinStationLevel": 4,
+    "Enabled": true,
+    "Requirements": 
+    [
+      {
+        "Item": "Honey",
+        "Amount": 10
+      },
+      {
+        "Item": "Resin",
+        "Amount": 10
+      },
+      {
+        "Item": "Cloudberry",
+        "Amount": 10
+      }
+    ]
+  },
+  {
     "Name": "$custom_item_meadbase_speed",
     "Item": "HoneyMeadBaseSpeed",
     "Amount": 1,
@@ -493,6 +535,29 @@
       {
         "Item": "MushroomJotunPuffs",
         "Amount": 1
+      }
+    ]
+  },
+  {
+    "Name": "$item_royaljelly10",
+    "Item": "RoyalJelly",
+    "Amount": 10,
+    "CraftingStation": "piece_apiary",
+    "MinStationLevel": 5,
+    "Enabled": true,
+    "Requirements": 
+    [
+      {
+        "Item": "Honey",
+        "Amount": 5
+      },
+      {
+        "Item": "Sap",
+        "Amount": 5
+      },
+      {
+        "Item": "MushroomJotunPuffs",
+        "Amount": 5
       }
     ]
   },
