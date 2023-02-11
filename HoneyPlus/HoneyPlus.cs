@@ -18,7 +18,7 @@ namespace HoneyPlus
   {
     public const string PluginGUID = "OhhLoz-HoneyPlus";
     public const string PluginName = "HoneyPlus";
-    public const string PluginVersion = "5.1.2";
+    public const string PluginVersion = "5.2.0";
 
     // FILES
     private const string AssetBundleName = "honeyplusassets";
