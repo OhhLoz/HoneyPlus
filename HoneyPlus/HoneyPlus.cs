@@ -18,7 +18,7 @@ namespace HoneyPlus
   {
     public const string PluginGUID = "OhhLoz-HoneyPlus";
     public const string PluginName = "HoneyPlus";
-    public const string PluginVersion = "5.2.0";
+    public const string PluginVersion = "5.2.1";
 
     // FILES
     private const string AssetBundleName = "honeyplusassets";
@@ -40,6 +40,7 @@ namespace HoneyPlus
     private ConfigEntry<bool> useMeadRecipes;
     private ConfigEntry<bool> useVanillaRecipeChanges;
     private ConfigEntry<bool> useVanillaRecipeAdditions;
+    private ConfigEntry<bool> addJerkysCauldron;
 
     private GameObject HoneyAttach;
 
@@ -82,7 +83,7 @@ namespace HoneyPlus
 
             if (recipeConfig.Name != null)
             {
-                if (useOldRecipes.Value && recipeConfig.CraftingStation == "piece_apiary")
+                if ((useOldRecipes.Value && recipeConfig.CraftingStation == "piece_apiary") || (addJerkysCauldron.Value && recipeConfig.Item.Contains("Jerky")))
                     recipeConfig.CraftingStation = "piece_cauldron";
                 ItemManager.Instance.AddRecipe(new CustomRecipe(recipeConfig));
             }
@@ -208,6 +209,11 @@ namespace HoneyPlus
 
         useVanillaRecipeChanges = Config.Bind("Tweaks", "Change vanilla recipes", true,
             new ConfigDescription("Set to false to disable changing of vanilla recipes (Wolf & Boar Jerky) to hand crafting",
+            new AcceptableValueRange<bool>(false, true),
+            new ConfigurationManagerAttributes { IsAdminOnly = true }));
+
+        addJerkysCauldron = Config.Bind("Tweaks", "Add jerkys to cauldron", false,
+            new ConfigDescription("Set to true to add the new Jerkys (Neck, Deer & Lox) to the cauldron instead of the hand crafting",
             new AcceptableValueRange<bool>(false, true),
             new ConfigurationManagerAttributes { IsAdminOnly = true }));
 
