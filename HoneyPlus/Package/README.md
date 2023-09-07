@@ -103,7 +103,7 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 * [Valheim Modding Wiki](https://github.com/Valheim-Modding/Wiki/wiki) - For creating a wiki to setup development environment  
 * [Jam](https://github.com/RandyKnapp/ValheimMods/tree/main/Jam) - The mod that inspired this one, it illustrated a way of adding items differently to the ValheimLib way, inspired me to create a hybrid method  
 * [baruchvlz](https://github.com/baruchvlz) - For handling the migration to Jotunn  
-* [CSOLYOO](https://github.com/CSOLYOO) - For the Chinese translations  
+* [CSOLYOO](https://github.com/CSOLYOO) & [wuzhitian](https://www.nexusmods.com/valheim/users/132820263) - For the Chinese translations  
 * [Amnu42](https://www.nexusmods.com/valheim/users/58442931) - For the German translations  
 * [conanchoas](https://www.nexusmods.com/valheim/users/17911054) - For the Spanish translations  
 * [kaiqueknup](https://www.nexusmods.com/valheim/users/37243480) & Andre - For the Brazilian Portuguese translations  
