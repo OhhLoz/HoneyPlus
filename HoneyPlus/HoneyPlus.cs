@@ -18,7 +18,7 @@ namespace HoneyPlus
   {
     public const string PluginGUID = "OhhLoz-HoneyPlus";
     public const string PluginName = "HoneyPlus";
-    public const string PluginVersion = "5.3.0";
+    public const string PluginVersion = "5.3.1";
 
     // FILES
     private const string AssetBundleName = "honeyplusassets";
@@ -31,6 +31,7 @@ namespace HoneyPlus
     private const string esTranslationFileName = "translation_ES.json";
     private const string deTranslationFileName = "translation_DE.json";
     private const string ptbrTranslationFileName = "translation_PT-BR.json";
+    private const string koTranslationFileName = "translation_KO.json";
 
     private CustomLocalization Localization;
     private Assembly ModAssembly;
@@ -172,7 +173,10 @@ namespace HoneyPlus
         Localization.AddJsonFile("Spanish", esTranslation);
 
         string ptbrTranslation = AssetUtils.LoadTextFromResources(ptbrTranslationFileName, ModAssembly);
-        Localization.AddJsonFile("Portuguese_Brazilian", ptbrTranslation);
+        Localization.AddJsonFile("Portuguese_Brazilian", ptbrTranslation);        
+            
+        string koTranslation = AssetUtils.LoadTextFromResources(koTranslationFileName, ModAssembly);
+        Localization.AddJsonFile("Korean", koTranslation);
     }
 
     private void AddItemConversions()
