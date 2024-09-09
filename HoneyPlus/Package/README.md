@@ -3,16 +3,17 @@ Valheim mod to add new Recipes using Honey, in my playthrough I found that I was
   
 MUST be installed on both the client and the server  
   
-Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPlus/releases) page by extracting the contents of the .zip inside the BepInEx/Plugins folder, on the [nexus](https://www.nexusmods.com/valheim/mods/2063) or on the [thunderstore](https://valheim.thunderstore.io/package/OhhLoz/HoneyPlus/)(recommended).  
+Can be installed either through the [GitHub Releases](https://github.com/OhhLoz/HoneyPlus/releases) page by extracting the contents of the .zip inside the BepInEx/Plugins folder, on the [Nexus](https://www.nexusmods.com/valheim/mods/2063) or on the [Thunderstore](https://valheim.thunderstore.io/package/OhhLoz/HoneyPlus/)(recommended).  
   
 ## Additions
 
 ### Adds Custom Pieces/Placeables with the Hammer*:
-* Apiary (Custom Crafting Table)
-* Bee Smoker (Apiary Extension)
-* Beekeepers Toolbox (Apiary Extension) 
-* Bottling Table (Apiary Extension)
-* Galdr's Blessing (Apiary Extension)
+* Apiary (Custom Crafting Table) - (15x Wood, 6x Honey, 1x Queen Bee)
+* Bee Smoker (Apiary Extension) - (5x Copper, 5x Leather Scraps, 5x Coal)
+* Beekeepers Toolbox (Apiary Extension) - (2x Silver, 5x Fine Wood, 5x Guck)
+* Bottling Table (Apiary Extension) - (5x Black Metal, 4x Crystal, 5x Core Wood)
+* Galdr's Blessing (Apiary Extension) - (10x Black Marble, 5x Yggrasil Wood, 4x Wisp)
+* Surtr's Conduit (Apiary Extension) - (5x Grausten, 5x Ashwood, 2x Flametal, 1x Molten Core)
 
 ### Adds to the Apiary/Cauldron:  
 
@@ -63,6 +64,16 @@ Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPl
 |Hare Pie|60|14|50|6|1800
 |Mead base: Aesir*|N/A|N/A|N/A|N/A|N/A
 |Royal Jelly*|15|15|0|1|900
+
+#### Level 6
+
+| Name  | HP | Stamina | Eitr | Regen | Duration
+|---|---|---|---|---|---|
+|Surtr's Delight|35|35|35|6|1500
+|Braised Volture Breast|76|28|0|6|1200
+|Fried Asksvin Tail|76|28|0|6|1200
+|Konungr's Omelette|45|70|0|6|1800
+|Völva's Brew|15|15|110|4|1800
   
 ### Adds to hand crafting:  
 

@@ -637,5 +637,132 @@
   {
     "Name" : null,
     "Item" : "HoneyMeadDamage"
+  },
+  {
+    "Name": "$custom_item_honeycookedvolture",
+    "Item": "HoneyCookedVoltureMeat",
+    "Amount": 1,
+    "CraftingStation": "piece_apiary",
+    "MinStationLevel": 6,
+    "Enabled": true,
+    "Requirements": 
+    [
+      {
+        "Item": "CookedVoltureMeat",
+        "Amount": 1
+      },
+      {
+        "Item": "Honey",
+        "Amount": 4
+      }
+    ]
+  },
+  {
+    "Name": "$custom_item_honeycookedasksvin",
+    "Item": "HoneyCookedAsksvin",
+    "Amount": 1,
+    "CraftingStation": "piece_apiary",
+    "MinStationLevel": 6,
+    "Enabled": true,
+    "Requirements": 
+    [
+      {
+        "Item": "CookedAsksvinMeat",
+        "Amount": 1
+      },
+      {
+        "Item": "Honey",
+        "Amount": 4
+      }
+    ]
+  },
+  {
+    "Name": "$custom_item_surtrsdelight",
+    "Item": "SurtrsDelight",
+    "Amount": 2,
+    "CraftingStation": "piece_apiary",
+    "MinStationLevel": 6,
+    "Enabled": true,
+    "Requirements": 
+    [
+      {
+        "Item": "Honey",
+        "Amount": 4
+      },
+      {
+        "Item": "MushroomSmokePuff",
+        "Amount": 4
+      },
+      {
+        "Item": "Fiddleheadfern",
+        "amount": 4
+      },
+      {
+        "Item": "Vineberry",
+        "amount": 4
+      }
+    ]
+  },
+  {
+    "Name": "$custom_item_volvasbrew",
+    "Item": "VolvasBrew",
+    "Amount": 2,
+    "CraftingStation": "piece_apiary",
+    "MinStationLevel": 6,
+    "Enabled": true,
+    "Requirements": 
+    [
+      {
+        "Item": "Honey",
+        "Amount": 4
+      },
+      {
+        "Item": "Sap",
+        "Amount": 4
+      },
+      {
+        "Item": "MushroomMagecap",
+        "amount": 4
+      },
+      {
+        "Item": "MushroomSmokePuff",
+        "amount": 4
+      },
+      {
+        "Item": "Eitr",
+        "amount": 1
+      }
+    ]
+  },
+  {
+    "Name": "$custom_item_konungromelette",
+    "Item": "KonungrOmelette",
+    "Amount": 1,
+    "CraftingStation": "piece_apiary",
+    "MinStationLevel": 6,
+    "Enabled": true,
+    "Requirements": 
+    [
+      {
+        "Item": "Honey",
+        "Amount": 4
+      },
+      {
+        "Item": "Fiddleheadfern",
+        "Amount": 2
+      },
+      {
+        "Item": "MushroomSmokePuff",
+        "amount": 2
+      },
+      {
+        "Item": "VoltureEgg",
+        "amount": 2
+      },
+      {
+        "Item": "RoyalJelly",
+        "amount": 2
+      }
+    ]
   }
 ]
