@@ -1,11 +1,11 @@
 {
   "name": "HoneyPlus",
-  "version_number": "5.3.2",
+  "version_number": "6.0.0",
   "website_url": "https://github.com/OhhLoz/HoneyPlus",
   "description": "Adds new food items surrounding Honey",
   "dependencies": 
   [
     "denikson-BepInExPack_Valheim-5.4.2105",
-    "ValheimModding-Jotunn-2.16.1"
+    "ValheimModding-Jotunn-2.20.3"
   ]
 }

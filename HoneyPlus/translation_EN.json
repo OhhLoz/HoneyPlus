@@ -5,6 +5,7 @@
       "custom_piece_apiary_ext2" : "Beekeepers Toolbox",
       "custom_piece_apiary_ext3" : "Bottling Table",
       "custom_piece_apiary_ext4" : "Galdr's Blessing",
+      "custom_piece_apiary_ext5" : "Surtr's Conduit",
       "custom_item_honeybread": "Honey Bread",
       "custom_item_honeybread_description": "Bread baked using a honey glaze",
       "custom_item_honeycookedmeat": "Pork Tenderloin",
@@ -68,5 +69,15 @@
       "se_food_honeycomb_title" : "Sugar Rush",
       "se_food_honeycomb_tooltip" : "Ignore your fatigue.",
       "custom_item_honeyyellowstew_lesser": "Lesser Yellow Stew",
-      "custom_item_honeyyellowstew_lesser_description": "A warm, yellow stew."
+      "custom_item_honeyyellowstew_lesser_description": "A warm, yellow stew.",
+      "custom_item_honeycookedvolture" : "Braised Volture Breast",
+      "custom_item_honeycookedvolture_description" : "Volture breast chopped & braised by the fire.",
+      "custom_item_honeycookedasksvin" : "Fried Asksvin Tail",
+      "custom_item_honeycookedasksvin_description" : "Asksvin tail fried in honey.",
+      "custom_item_surtrsdelight" : "Surtr's Delight",
+      "custom_item_surtrsdelight_description" : "May your fire burn bright.",
+      "custom_item_volvasbrew" : "Völva's Brew",
+      "custom_item_volvasbrew_description" : "A brew recipe passed down from Völvas, legendary practitioners of Galdr.",
+      "custom_item_konungromelette" : "Konungr's Omelette",
+      "custom_item_konungromelette_description" : "The mightiest of omelettes."
 }

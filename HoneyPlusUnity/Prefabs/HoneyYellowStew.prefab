@@ -29,13 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378289607207403}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 566288436665240944}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &54412717195018698
 Rigidbody:
@@ -44,10 +45,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378289607207403}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -62,7 +74,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1378289607207403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e686c97f340dd446ab12ddda235741d, type: 3}
+  m_Script: {fileID: 1521249158, guid: c1b78fa918b030faf1c1f6f6164daeb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_persistent: 1
@@ -78,7 +90,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1378289607207403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a823c9336ca9e5e4080344680a3d51d4, type: 3}
+  m_Script: {fileID: 1109157524, guid: c1b78fa918b030faf1c1f6f6164daeb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_syncPosition: 1
@@ -95,7 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1378289607207403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b51314049a3694d4987b5596cd371e6d, type: 3}
+  m_Script: {fileID: 825357479, guid: c1b78fa918b030faf1c1f6f6164daeb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_autoPickup: 1
@@ -105,6 +117,8 @@ MonoBehaviour:
     m_durability: 100
     m_quality: 1
     m_variant: 0
+    m_worldLevel: 0
+    m_pickedUp: 0
     m_shared:
       m_name: $custom_item_honeyyellowstew
       m_dlc: 
@@ -131,8 +145,17 @@ MonoBehaviour:
       m_setSize: 0
       m_setStatusEffect: {fileID: 0}
       m_equipStatusEffect: {fileID: 0}
-      m_movementModifier: 0
       m_eitrRegenModifier: 0
+      m_movementModifier: 0
+      m_homeItemsStaminaModifier: 0
+      m_heatResistanceModifier: 0
+      m_jumpStaminaModifier: 0
+      m_attackStaminaModifier: 0
+      m_blockStaminaModifier: 0
+      m_dodgeStaminaModifier: 0
+      m_swimStaminaModifier: 0
+      m_sneakStaminaModifier: 0
+      m_runStaminaModifier: 0
       m_food: 26
       m_foodStamina: 85
       m_foodEitr: 0
@@ -141,6 +164,8 @@ MonoBehaviour:
       m_armorMaterial: {fileID: 0}
       m_helmetHideHair: 1
       m_helmetHideBeard: 0
+      m_helmetHairSettings: []
+      m_helmetBeardSettings: []
       m_armor: 10
       m_armorPerLevel: 1
       m_damageModifiers: []
@@ -183,6 +208,7 @@ MonoBehaviour:
       m_tamedOnly: 0
       m_alwaysRotate: 0
       m_attackStatusEffect: {fileID: 0}
+      m_attackStatusEffectChance: 1
       m_spawnOnHit: {fileID: 0}
       m_spawnOnHitTerrain: {fileID: 0}
       m_projectileToolTip: 1
@@ -190,20 +216,29 @@ MonoBehaviour:
       m_attack:
         m_attackType: 0
         m_attackAnimation: 
+        m_chargeAnimationBool: 
         m_attackRandomAnimations: 0
         m_attackChainLevels: 0
         m_loopingAttack: 0
         m_consumeItem: 0
         m_hitTerrain: 1
+        m_hitFriendly: 0
+        m_isHomeItem: 0
         m_attackStamina: 20
         m_attackEitr: 0
         m_attackHealth: 0
         m_attackHealthPercentage: 0
+        m_attackHealthLowBlockUse: 1
+        m_attackHealthReturnHit: 0
+        m_attackKillsSelf: 0
         m_speedFactor: 0.2
         m_speedFactorRotation: 0.2
         m_attackStartNoise: 10
         m_attackHitNoise: 30
         m_damageMultiplier: 1
+        m_damageMultiplierPerMissingHP: 0
+        m_damageMultiplierByTotalHealthMissing: 0
+        m_staminaReturnPerMissingHP: 0
         m_forceMultiplier: 1
         m_staggerMultiplier: 1
         m_recoilPushback: 0
@@ -219,10 +254,36 @@ MonoBehaviour:
         m_reloadAnimation: 
         m_reloadTime: 2
         m_reloadStaminaDrain: 0
+        m_reloadEitrDrain: 0
         m_bowDraw: 0
         m_drawDurationMin: 0
         m_drawStaminaDrain: 0
+        m_drawEitrDrain: 0
         m_drawAnimationState: 
+        m_drawVelocityCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
         m_attackAngle: 90
         m_attackRayWidth: 0
         m_maxYAngle: 0
@@ -233,6 +294,8 @@ MonoBehaviour:
         m_pickaxeSpecial: 0
         m_lastChainDamageMultiplier: 2
         m_resetChainIfHit: 0
+        m_spawnOnHit: {fileID: 0}
+        m_spawnOnHitChance: 0
         m_raiseSkillAmount: 1
         m_skillHitType: 4
         m_specialHitSkill: 0
@@ -240,8 +303,11 @@ MonoBehaviour:
         m_attackProjectile: {fileID: 0}
         m_projectileVel: 10
         m_projectileVelMin: 2
+        m_randomVelocity: 0
         m_projectileAccuracy: 10
         m_projectileAccuracyMin: 20
+        m_circularProjectileLaunch: 0
+        m_distributeProjectilesAroundCircle: 0
         m_skillAccuracy: 0
         m_useCharacterFacing: 0
         m_useCharacterFacingYAim: 0
@@ -266,20 +332,29 @@ MonoBehaviour:
       m_secondaryAttack:
         m_attackType: 0
         m_attackAnimation: 
+        m_chargeAnimationBool: 
         m_attackRandomAnimations: 0
         m_attackChainLevels: 0
         m_loopingAttack: 0
         m_consumeItem: 0
         m_hitTerrain: 1
+        m_hitFriendly: 0
+        m_isHomeItem: 0
         m_attackStamina: 20
         m_attackEitr: 0
         m_attackHealth: 0
         m_attackHealthPercentage: 0
+        m_attackHealthLowBlockUse: 1
+        m_attackHealthReturnHit: 0
+        m_attackKillsSelf: 0
         m_speedFactor: 0.2
         m_speedFactorRotation: 0.2
         m_attackStartNoise: 10
         m_attackHitNoise: 30
         m_damageMultiplier: 1
+        m_damageMultiplierPerMissingHP: 0
+        m_damageMultiplierByTotalHealthMissing: 0
+        m_staminaReturnPerMissingHP: 0
         m_forceMultiplier: 1
         m_staggerMultiplier: 1
         m_recoilPushback: 0
@@ -295,10 +370,36 @@ MonoBehaviour:
         m_reloadAnimation: 
         m_reloadTime: 2
         m_reloadStaminaDrain: 0
+        m_reloadEitrDrain: 0
         m_bowDraw: 0
         m_drawDurationMin: 0
         m_drawStaminaDrain: 0
+        m_drawEitrDrain: 0
         m_drawAnimationState: 
+        m_drawVelocityCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 1
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
         m_attackAngle: 90
         m_attackRayWidth: 0
         m_maxYAngle: 0
@@ -309,6 +410,8 @@ MonoBehaviour:
         m_pickaxeSpecial: 0
         m_lastChainDamageMultiplier: 2
         m_resetChainIfHit: 0
+        m_spawnOnHit: {fileID: 0}
+        m_spawnOnHitChance: 0
         m_raiseSkillAmount: 1
         m_skillHitType: 4
         m_specialHitSkill: 0
@@ -316,8 +419,11 @@ MonoBehaviour:
         m_attackProjectile: {fileID: 0}
         m_projectileVel: 10
         m_projectileVelMin: 2
+        m_randomVelocity: 0
         m_projectileAccuracy: 10
         m_projectileAccuracyMin: 20
+        m_circularProjectileLaunch: 0
+        m_distributeProjectilesAroundCircle: 0
         m_skillAccuracy: 0
         m_useCharacterFacing: 0
         m_useCharacterFacingYAim: 0
@@ -350,6 +456,7 @@ MonoBehaviour:
       m_aiAttackRangeMin: 0
       m_aiAttackInterval: 2
       m_aiAttackMaxAngle: 5
+      m_aiInvertAngleCheck: 0
       m_aiWhenFlying: 1
       m_aiWhenFlyingAltitudeMin: 0
       m_aiWhenFlyingAltitudeMax: 999999
@@ -359,6 +466,7 @@ MonoBehaviour:
       m_aiInDungeonOnly: 0
       m_aiInMistOnly: 0
       m_aiMaxHealthPercentage: 1
+      m_aiMinHealthPercentage: 0
       m_aiTargetType: 0
       m_hitEffect:
         m_effectPrefabs: []
@@ -369,6 +477,10 @@ MonoBehaviour:
       m_startEffect:
         m_effectPrefabs: []
       m_holdStartEffect:
+        m_effectPrefabs: []
+      m_equipEffect:
+        m_effectPrefabs: []
+      m_unequipEffect:
         m_effectPrefabs: []
       m_triggerEffect:
         m_effectPrefabs: []
@@ -387,6 +499,7 @@ ParticleSystemRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
@@ -395,7 +508,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e2d42868caf1e4c488480fa2ef613a9d, type: 2}
+  - {fileID: 2100000, guid: d2027ef5b2545d3459794d8dda0b6c43, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -417,6 +530,7 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
+  m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
@@ -429,17 +543,23 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+  m_MeshWeighting: 1
+  m_MeshWeighting1: 1
+  m_MeshWeighting2: 1
+  m_MeshWeighting3: 1
   m_MaskInteraction: 0
 --- !u!198 &198941216827680576
 ParticleSystem:
@@ -448,19 +568,19 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378289607207403}
-  serializedVersion: 7
+  serializedVersion: 8
   lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
+  emitterVelocityMode: 1
   looping: 1
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -551,6 +671,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -580,6 +701,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
     startSize:
@@ -685,7 +807,9 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
+    gravitySource: 0
     maxNumParticles: 2
+    customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -1035,6 +1159,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -1064,6 +1189,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
@@ -2258,6 +2384,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -2287,6 +2414,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
@@ -2460,6 +2588,7 @@ ParticleSystem:
         m_RotationOrder: 4
     minVertexDistance: 0.2
     textureMode: 0
+    textureScale: {x: 1, y: 1}
     ribbonCount: 1
     shadowBias: 0.5
     worldSpace: 0
@@ -2502,6 +2631,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -2531,6 +2661,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
     widthOverTrail:
@@ -2582,6 +2713,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -2611,6 +2743,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   CustomDataModule:
@@ -2649,6 +2782,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -2678,6 +2812,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
     colorLabel0: Color
@@ -2787,6 +2922,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
@@ -2816,6 +2952,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
+        m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
     colorLabel1: Color
@@ -2918,12 +3055,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2885729606591301352}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: -2.2204463e-16, z: -1.3234891e-23, w: 1}
   m_LocalPosition: {x: -0.0236, y: 0.013000488, z: 0}
   m_LocalScale: {x: 0.17101, y: 0.17101, z: 0.17101}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4676909906042924}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.000002504478, y: 2.5444441e-14, z: 2.0727127e-21}
 --- !u!33 &8812694139496884103
 MeshFilter:
@@ -2932,7 +3070,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2885729606591301352}
-  m_Mesh: {fileID: 4300000, guid: dd018f24344066c4f93f73799bf0e9c7, type: 2}
+  m_Mesh: {fileID: 4300000, guid: d3d32b8d5b3c0a04d9c112d50f4b00de, type: 2}
 --- !u!23 &792828124456894631
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2944,6 +3082,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2952,7 +3091,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 21ced3f46a58e8b48aa1110c2e661fc7, type: 2}
+  - {fileID: 2100000, guid: 2ffa79793f645f446ae0430a7e76ee60, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3003,9 +3142,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2885729606591301352}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: dd018f24344066c4f93f73799bf0e9c7, type: 2}
+  m_Mesh: {fileID: 4300000, guid: d3d32b8d5b3c0a04d9c112d50f4b00de, type: 2}

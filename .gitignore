@@ -377,4 +377,5 @@ HoneyPlus/HoneyPlus.csproj
 
 HoneyPlusUnity/valheim
 
-HoneyPlusUnity/AssetRipper/
+HoneyPlusUnity/Prefabs/Mocks/**/*.*
+!HoneyPlusUnity/Prefabs/Mocks/**/*.meta

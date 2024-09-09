@@ -18,9 +18,8 @@ namespace HoneyPlus
   {
     public const string PluginGUID = "OhhLoz-HoneyPlus";
     public const string PluginName = "HoneyPlus";
-    public const string PluginVersion = "5.3.2";
+    public const string PluginVersion = "6.0.0";
 
-    // FILES
     private const string AssetBundleName = "honeyplusassets";
     private const string RecipeFileName = "recipes.json";
     private const string PieceFileName = "pieces.json";
@@ -92,7 +91,7 @@ namespace HoneyPlus
             // Stops Tar/Royal Jelly being added as an item, only as a recipe above
             if ((recipeConfig.Item == "Tar") || (recipeConfig.Item == "RoyalJelly"))
                 continue;
-            CustomItem customItem = new CustomItem(HoneyPlusAssetBundle.LoadAsset<GameObject>(recipeConfig.Item), true);
+            CustomItem customItem = new CustomItem(HoneyPlusAssetBundle.LoadAsset<GameObject>(recipeConfig.Item), fixReference: true);
             ItemManager.Instance.AddItem(customItem);
             Jotunn.Logger.LogInfo("Loaded Item: " + recipeConfig.Item);
         }
