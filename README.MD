@@ -3,7 +3,7 @@ Valheim mod to add new Recipes using Honey, in my playthrough I found that I was
   
 MUST be installed on both the client and the server  
   
-Can be installed either through the [releases](https://github.com/OhhLoz/HoneyPlus/releases) page by extracting the contents of the .zip inside the BepInEx/Plugins folder, on the [nexus](https://www.nexusmods.com/valheim/mods/2063) or on the [thunderstore](https://valheim.thunderstore.io/package/OhhLoz/HoneyPlus/)(recommended).  
+Can be installed either through the [GitHub releases](https://github.com/OhhLoz/HoneyPlus/releases) page by extracting the contents of the .zip inside the BepInEx/Plugins folder, on the [nexus](https://www.nexusmods.com/valheim/mods/2063) or on the [thunderstore](https://valheim.thunderstore.io/package/OhhLoz/HoneyPlus/)(recommended).  
   
 ## Additions
 
@@ -118,4 +118,5 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 * [Amnu42](https://www.nexusmods.com/valheim/users/58442931) - For the German translations  
 * [conanchoas](https://www.nexusmods.com/valheim/users/17911054) - For the Spanish translations  
 * [kaiqueknup](https://www.nexusmods.com/valheim/users/37243480) & Andre - For the Brazilian Portuguese translations  
+* [Kladbm](https://github.com/Kladbm) & [Maximilyanuz](https://github.com/Maximilyanuz) - For the Russian & Ukrainian translations  
 * [KillFace212](https://github.com/Killface212) - For various food suggestions
