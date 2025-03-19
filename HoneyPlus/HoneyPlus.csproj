@@ -196,6 +196,8 @@
     <EmbeddedResource Include="pieces.json" />
     <EmbeddedResource Include="translation_PT-BR.json" />
     <EmbeddedResource Include="translation_KO.json" />
+    <EmbeddedResource Include="translation_RU.json" />
+    <EmbeddedResource Include="translation_UA.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Package\plugins\" />
